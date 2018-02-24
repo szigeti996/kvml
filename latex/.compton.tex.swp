@@ -6,7 +6,7 @@
 \usepackage{geometry}
 \geometry{a4paper,
 		     tmargin = 35mm, 
-		     lmargin = 30mm,
+		     lmargin = 25mm,
 		     rmargin = 30mm,
 		     bmargin = 30mm}
 \usepackage{mathtools}
@@ -16,7 +16,9 @@
 \usepackage{amsmath,amssymb}
 \usepackage{float}
 
+
 \usepackage{indentfirst}
+\usepackage{subfig}
 
 \renewcommand\thesection{\Roman{section}}
 
@@ -62,6 +64,10 @@
 \item $^{137}Cs$, közvetett $\gamma$-foton forrás
 \end{itemize}
 
+\subsection{Mérési elrendezés}
+
+
+
 \vspace{2cm}
 
 \section{Elméleti összefoglaló}
@@ -89,6 +95,8 @@ alakban. Ahol $r_{0}$ a klasszikus elektronsugár, melynek értéke a Bohr-model
 
 \section{Mérési feladatok, kiértékelés}
 
+\subsection{Aktivitás, dózis}
+
 \par A $^{137}Cs$ minta aktivitása 1963. július 1-jén $486.55~MBq$ volt. A cézium felezési ideje $T = (11018 \pm 9.5)~nap$, míg az adott dátum óta eltelt napok száma a mérés időpontjáig $19 960~nap$ volt. Így az exponenciális bomlástörvény szerint, ma az aktivitás
 
 \begin{equation*}
@@ -98,7 +106,116 @@ alakban. Ahol $r_{0}$ a klasszikus elektronsugár, melynek értéke a Bohr-model
 \par Mivel az elbomlott céziumokból további bomlás után nagyjából $94\%$-os valószínűséggel lesz $662~keV$-os $\gamma$-foton, így a másodpercenként közvetített teljes energia
 
 \begin{equation*}
-	\dot{E} = ()
+	\dot{E} = A(t)\eta E_{\gamma} = 1.38 \times 10^{-5} ~\frac{J}{s} 
 \end{equation*}
+
+amiből személyenként kapjuk az elnyelt dózist rendre akkor ha lenyeljük, 1 méterre vagyunk a forrástól, valamint ha 1 méterre, ólom árnyékolás választ el a forrástól
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+dózis [mSv] - Dávid & dózis [mSv] - Marci & dózis [mSv] - Alex \\
+\hline
+3.15 & 2.25 & 2.4 \\
+\hline
+0.13 & 0.09 & 0.09 \\
+\hline
+5.69e-05 & 4.08e-05 & 4.27e-05 \\
+\hline
+\end{tabular}
+\end{center}
+
+ahol a mérés idejét 4 órának vettem és ezt helyettesíttem az adott képletekre melyek rendere
+
+\begin{gather*}
+D_{max} = \frac{\dot{E}\times 4\times 60\times 60}{m} \\
+D_{1m} = \frac{\dot{E}\times 4\times 60\times 60}{m} \frac{0.5}{4\times 1^{2} \pi} \\
+D_{1m, Pb} = \frac{\dot{E}\times 4\times 60\times 60}{m} \frac{0.5}{4\times 1^{2} \pi} \times e^{-10}
+\end{gather*}
+
+\par Látható, hogy árnyékolással és megfelelő távolságtartással nem számottevő a labor alatt elnyelt dózis, azonban ha közvetlenül a szerezetbe kerülne, már számottevő többlet dózist lehetne kapni.
+
+\par Feladat volt még megbecsülni a $\vartheta = 0^{\circ}$ szögben, az elektron detektorra érkező fotonok számát másodpercenként. Ehhez felhasználva a mérési összeállítás geometriáját
+
+\begin{equation*}
+	N_{(foton, \vartheta = 0^{\circ})} = \frac{0.3^{2}}{4(17.33-3.38)^{2}}\times 138.61 ~(MBq) \times 1 ~(s) \approx 16 000
+\end{equation*} 
+
+\par Azonban ezalatt a mérés során ehhez kapcsolódóan nem volt több feladatunk.
+
+\subsection{Szögfüggés vizsgálata}
+
+\par A szögfüggéshez tartozó sokcsatornás beütésszámlálóval 10 különböző szöget vizsgáltunk mindegyiknék nagyjából $1000~s$-ig. Harminc fokról indulva, száztíz fokig néztük meg a beütésket, majd a hisztogrammokra exponenciális háttérrel, a Compton-csúcsra Gauss-görbét illesztettünk. Az illesztett adatok táblázatba foglalva
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+szög [$^{\circ}$] & csatorna & szórás & terület & csatorna hiba & szórás hiba & terület hiba & idő [t] \\
+\hline
+30 & 89.73 & 3.2288 & 165.78 & 0.3738 & 0.22815 & 11.956 & 1224 \\
+\hline
+40 & 82.305 & 3.1082 & 173.28 & 0.36105 & 0.43538 & 34.751 & 1085 \\
+\hline
+50 & 74.374 & 2.4315 & 120.05 & 0.42373 & 0.27387 & 12.494 & 1002 \\
+\hline
+60 & 66.148 & 1.9553 & 84.611 & 0.42954 & 0.42577 & 25.977 & 962 \\
+\hline
+70 & 60.631 & 1.9307 & 107.55 & 0.24439 & 0.22981 & 14.833 & 1166 \\
+\hline
+80 & 54.489 & 2.3095 & 121.37 & 0.33175 & 0.20426 & 11.257 & 1100 \\
+\hline
+90 & 50.916 & 1.6683 & 99.523 & 0.37857 & 0.26849 & 17.898 & 977 \\
+\hline
+100 & 46.6247 & 1.4583 & 100.78 & 0.18966 & 0.12546 & 9.413 & 1113 \\
+\hline
+110 & 42.881 & 1.8229 & 154.67 & 0.33516 & 0.31118 & 43.591 & 1098 \\
+\hline
+\end{tabular}
+\end{center}
+
+\par A görbéket a $matplotlib$ könyvtárral illesztettük exponenciális háttérrel, amely paramétreit itt nem tűntettük fel. Az ábrák a kövekezőképpen festenek
+
+\begin{figure}[!htb]
+    \centering
+    \begin{minipage}{.49\textwidth}
+        \centering
+        \includegraphics[width=1.\linewidth]{../plots/withbackground/30_1224fit.png}
+    \end{minipage}
+    \begin{minipage}{.49\textwidth}
+        \centering
+        \includegraphics[width=1.\linewidth]{../plots/withbackground/40_1085fit.png}
+    \end{minipage}
+    \begin{minipage}{.49\textwidth}
+        \centering
+        \includegraphics[width=1.\linewidth]{../plots/withbackground/50_1002fit.png}
+    \end{minipage}%
+    \begin{minipage}{.49\textwidth}
+        \centering
+        \includegraphics[width=1.\linewidth]{../plots/withbackground/60_962fit.png}
+    \end{minipage}
+\end{figure}
+\begin{figure}[!htb]
+    \begin{minipage}{.49\textwidth}
+        \centering
+        \includegraphics[width=1.\linewidth]{../plots/withbackground/70_1166fit.png}
+    \end{minipage}%
+    \begin{minipage}{.49\textwidth}
+        \centering
+        \includegraphics[width=1.\linewidth]{../plots/withbackground/80_1100fit.png}
+    \end{minipage}
+    \begin{minipage}{.49\textwidth}
+        \centering
+        \includegraphics[width=1.\linewidth]{../plots/withbackground/90_977fit.png}
+    \end{minipage}
+    \begin{minipage}{.49\textwidth}
+        \centering
+        \includegraphics[width=1.\linewidth]{../plots/withbackground/100_1113fit.png}
+    \end{minipage}
+    \begin{minipage}{.49\textwidth}
+        \centering
+        \includegraphics[width=1.\linewidth]{../plots/withbackground/110_1098fit.png}
+    \end{minipage}
+\end{figure}	
+\end{document}
 
 \end{document}
