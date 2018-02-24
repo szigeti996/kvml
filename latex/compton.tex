@@ -1,0 +1,101 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[hungarian]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{a4paper,
+		     tmargin = 35mm, 
+		     lmargin = 30mm,
+		     rmargin = 30mm,
+		     bmargin = 30mm}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{setspace}
+\usepackage{amsmath,amssymb}
+\usepackage{float}
+
+\usepackage{indentfirst}
+
+\renewcommand\thesection{\Roman{section}}
+
+\begin{document}
+
+\linespread{1.2}
+
+\begin{titlepage}
+
+	\centering
+	\includegraphics[width=0.66\textwidth]{elte.jpg}\par\vspace{1cm}
+	{\scshape\LARGE ELTE TTK \par}
+	\vspace{3cm}
+	{\scshape\Large Az Compton-effektus vizsgálata\par}
+	\vspace{1cm}
+	{\large\itshape Olar Alex\par}
+	\vspace{3cm}
+	laborvezető\par
+	\vspace{0.3cm}
+	{\Large Csanád Máté}
+	\vfill
+	{\large 2018 \par}
+	
+\end{titlepage}
+
+\begin{abstract}
+\par A mérés célja az volt, hogy a kiértékelés során a lehető legpontosabban járjunk el a számolások közben, hibabecslésen alkalmával. A Compton-effektus tulajdonságait vizsgáltuk. Az energia és a hatáskereszmetszet elméleti szögfüggését vettük alapul a kiértékelés során.
+\end{abstract}
+
+\vfill
+
+\tableofcontents
+
+\newpage
+
+\section{Mérési eszközök}
+
+\begin{itemize}
+\item plasztik elektron detektor
+\item állítható fotodetektor
+\item sokcsatornás analizátor (MCA)
+\item számítógép
+\item $^{137}Cs$, közvetett $\gamma$-foton forrás
+\end{itemize}
+
+\vspace{2cm}
+
+\section{Elméleti összefoglaló}
+
+\par A Compton-effektus a fotonok, lazán kötött (kvázi szabad) elektronokon való szóródását írja le, alapegyenlete a négyesimpulzus megmaradásból következik
+
+\begin{equation*}
+	E = \frac{E_{0}}{1 + \frac{E_{0}}{m_{e}c^{2}}(1 - cos\vartheta)}	
+\end{equation*}
+
+ahol $\vartheta$ az foton szórási szögét, $E_{0}$ annak kezdeti energiáját, míg $m_{e}$ az elektron tömegét jelöli. A mérés során $E_{0}$ értéke adott, a $\gamma$-fotonok $662~keV$ enerigával rendelkeznek. Természetesen $E$ a szórt fotonok energiáját jelöli.
+\par Bevezetve a $P = \frac{E}{E_{0}}$ arányszámot, az elméleti differenciális hatáskeresztmetszet felírható
+
+\begin{equation*}
+	\frac{d\Sigma}{d\Omega} = \frac{1}{2}r_{0}^{2}(P - P^{2}sin^{2}\vartheta + P^{3})
+\end{equation*}
+
+alakban. Ahol $r_{0}$ a klasszikus elektronsugár, melynek értéke a Bohr-modell alapján számolható
+
+\begin{equation*}
+	r_{0} = \frac{1}{4\pi\epsilon_{0}}\frac{e^{2}}{m_{e}c^{2}} = 2.82 \times 10^{-15} ~m
+\end{equation*}
+
+\par A mérés során ezeket az összefüggéseket próbáljuk a lehető legpontosabban belátni.
+
+\section{Mérési feladatok, kiértékelés}
+
+\par A $^{137}Cs$ minta aktivitása 1963. július 1-jén $486.55~MBq$ volt. A cézium felezési ideje $T = (11018 \pm 9.5)~nap$, míg az adott dátum óta eltelt napok száma a mérés időpontjáig $19 960~nap$ volt. Így az exponenciális bomlástörvény szerint, ma az aktivitás
+
+\begin{equation*}
+	A(t) = A_{0}2^{-\frac{t}{T}} = (138.61 \pm 0.08)~MBq
+\end{equation*}
+
+
+
+
+\end{document}
