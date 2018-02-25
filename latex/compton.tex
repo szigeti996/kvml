@@ -288,32 +288,32 @@ terület & 140.79 & 12.97 & 9.2 \\
 \par Így kiszámolva a mért energiákat és azok hibáját
 
 \begin{center}
-\begin{tabular}{|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
-$E_{\text{elméleti}}$ & $E_{\text{mért}}$ & $\Delta E_{\text{mért}}$ \\
+$E_{\text{elméleti}}$ & $E_{\text{mért}}$ & $\Delta E_{\text{mért}}$ & $\chi^{2}$ \\
 \hline
-563.822 & 559.789 & 2.56299 \\
+563.822 & 559.789 & 2.56299 & 2.48 \\
 \hline
-507.789 & 508.879 & 2.47557 \\
+507.789 & 508.879 & 2.47557 & 0.19\\
 \hline
-452.366 & 454.5 & 2.90534 \\
+452.366 & 454.5 & 2.90534 & 0.54\\
 \hline
-401.59 & 398.097 & 2.94518 \\
+401.59 & 398.097 & 2.94518 & 1.41\\
 \hline
-357.226 & 360.269 & 1.67568 \\
+357.226 & 360.269 & 1.67568 & 3.3\\
 \hline
-319.597 & 318.156 & 2.27467 \\
+319.597 & 318.156 & 2.27467 & 0.4\\
 \hline
-288.279 & 293.658 & 2.5957 \\
+288.279 & 293.658 & 2.5957 & 4.29\\
 \hline
-262.552 & 264.234 & 1.30042 \\
+262.552 & 264.234 & 1.30042 & 1.67\\
 \hline
-241.641 & 238.044 & 1.33704 \\
+241.641 & 238.044 & 1.33704 & 7.24\\
 \hline
 \end{tabular}
 \end{center}
 
-\par Ekkor kiszámolva $\chi^{2}$-et erre nagyjából $21.5$-et kapunk. Az ereményt az alábbi képletbe helyettesítve számoltuk
+\par Ekkor kiszámolva $\chi^{2}$-ek összegét erre nagyjából $21.5$-et kapunk. Az eredményt az alábbi képletbe helyettesítve számoltuk
 
 \begin{equation*}
 	\chi^{2} = \sum_{i}\frac{(E_{\text{mért}, i} - E_{\text{elméleti}, i} + \epsilon E_{\text{szisztematikus} , i})^{2}}{(\Delta E_{\text{mért,i}})^{2}}
@@ -328,6 +328,49 @@ $E_{\text{elméleti}}$ & $E_{\text{mért}}$ & $\Delta E_{\text{mért}}$ \\
 	\frac{d\sigma}{d\Omega} = \frac{1}{2}r_{0}^{2}(P - P^{2}sin^{2}\vartheta + P^{3})
 \end{equation*}
 
-\par Itt felhaználjük az illesztett Gauss-görbék területét, amelyet illesztési paraméterként megkaptunk. 
+\par Itt felhaználjük az illesztett Gauss-görbék területét, amelyet illesztési paraméterként megkaptunk. A laborhoz tartozó mérési leírásban szereplő képletek segítsével kiszámolható a hatásfok ($\eta$), valamint az $\frac{1}{\eta}\frac{dN}{dt}$ mennyiség, ami lényegében a differenciális hatáskeresztmetszek a $K$ állandóval leosztva. Az adatokat táblázatba foglalva
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+szög[$^{\circ}$] &  $\eta$ & $\frac{1}{\eta}\frac{dN_{\text{mért}}}{dt}$ [$s^{-1}$] & $\Delta\left(\frac{
+1}{\eta}\frac{dN_{\text{mért}}}{dt}\right)$ [$s^{-1}$] & illesztett függvény [$s^{-1}$]& $\chi^{2}$ \\
+\hline
+30 & 0.0974 & 1.39 & 0.10 & 1.34 & 0.27 \\
+\hline
+40 & 0.115 & 1.38 & 0.28 & 1.02 & 1.76 \\
+\hline
+50 & 0.140 & 0.859 & 0.089 & 0.779 & 0.79 \\
+\hline
+60 & 0.169 & 0.522 & 0.160 & 0.618 & 0.36 \\
+\hline
+70 & 0.200 & 0.460 & 0.063 & 0.511 & 0.66 \\
+\hline
+80 & 0.234 & 0.471 & 0.044 & 0.442 & 0.45 \\
+\hline
+90 & 0.267 & 0.381 & 0.069 & 0.397 & 0.05 \\
+\hline
+100 & 0.298 & 0.303 & 0.028 & 0.367 & 5.09 \\
+\hline
+110 & 0.327 & 0.391 & 0.034 & 0.348 & 1.61 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\par Hatásfok, hatásfokkal súlyozott beütési gyakoriság, valamint az arra illesztett függvény ($K\cdot (P-P^2\sin^2{\theta}+P^3)$) értékei és a hozzájuk tartozó $\chi^2$.
+
+\newpage
+
+\begin{figure}
+\centering
+\includegraphics[width=0.86\textwidth]{../notebook/klein-nishina.png}
+\end{figure}
+
+\par Ahol $K = 2.26 10^{-26}~cm^{-2}s^{-1}$, a mérés leírásából lett véve. Esetünkben 9 szabadsági fokkal számolva a $\chi^{2}$-ek összege $11.04$ lett, ebből a konfidencia szint nagyjából $20\%$-os.
+
+\section{Összefoglalás}
+\par Úgy gondoljuk, hogy a konfidencia szinte jelentős mértékben növelhető volna, ha több ideig mérnénk egy-egy szögnél, hiszen ekkor a csúcsaink több beütést tartalmaznának és így a statisztikus hiba, valamint az illesztésből származó hiba csökkenthető lenne. Mindezek ellenére a mérés sikeresnek tekinthető.
 
 \end{document}
