@@ -1,0 +1,281 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[a4paper,12pt]{article}
+ \usepackage[T1]{fontenc}
+ \usepackage[utf8]{inputenc}
+ \usepackage[magyar]{babel}
+ \usepackage{graphicx}
+ \usepackage{gensymb}
+ \usepackage{float}
+ \usepackage{mhchem}
+ \usepackage{amssymb}
+ \usepackage{bm}
+ \usepackage{geometry}
+\geometry{a4paper,
+		     tmargin = 35mm, 
+		     lmargin = 25mm,
+		     rmargin = 30mm,
+		     bmargin = 30mm}
+ 
+ 
+ \usepackage{graphicx}
+\usepackage{fixltx2e}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{braket}
+\usepackage{indentfirst}
+%\usepackage[dvips]{graphicx}
+%\usepackage{epstopdf}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+ \frenchspacing
+ 
+ \title{Diffúzió}
+ \author{Berta Dénes, Katona Dávid, Kelemen Ádám}
+ \date{Mérés dátuma: 2017.03.08.}
+ 
+ \pagestyle{plain}
+ 
+ \begin{document}
+ 
+\begin{titlepage}
+	\centering
+	\includegraphics[width=0.55\textwidth]{elte.png}\par\vspace{1cm}
+	{\scshape\LARGE Korszerű vizsgálati módszerek laboratórium \par}
+	
+	\vspace{1cm}
+	{\huge\bfseries Compton-effektus vizsgálata\par}
+	\vspace{1cm}
+	{\Large\itshape Katona Dávid\par}
+	\vspace{1cm}
+	{\itshape Mérőtársak: Máthé Marcell, Olar Alex\par}
+	\vspace{0.5cm}
+	{\scshape Mérés dátuma: 2018. 02. 22.\par}
+
+
+	\vfill
+
+% Bottom of the page
+	{\large  2018. 02. 28.\par}
+\end{titlepage}
+
+ \section*{Bevezetés}
+ 
+ \subsection*{A mérés célja}
+ A mérés célja a Compton-effektus differenciális hatáskeresztmetszetének, illetve a szóródott foton energiájának vizsgálata a szög függvényében.
+
+ \subsection*{Elméleti háttér}
+ A Compton-effektus a fotonok rugalmatlan szóródása (azok energiájához képest) gyengén kötött elektronokon. Mivel a szóródás rugalmatlan, a foton energiát ad át az elektronnak, amelynek mennyisége szögfüggő. A tömeghéj-feltételből, illetve a négyesimpulzus-megmaradásból levezethető a szóródott foton energiájának szögfüggése (\ref{eq:compton}. egyenlet, ahol $E_0$ a beövő foton energiája, $m_e$ az elektrontömeg, $\theta$ a szóródás szöge).
+ 
+ \begin{equation}
+	P:= \frac{E}{E_0}=\frac{1}{1+\frac{E_0}{m_ec^2}(1-\cos{\theta})}
+ 	\label{eq:compton}
+ \end{equation}
+ A szórást a differenciális hatáskeresztmetszet $\frac{d\sigma}{d\Omega}(\theta)$ jellemzi, melynek definícióját írja le \aref{eq:diff_hkm}. egyenlet, ahol $N$ a $\theta$ irányba szóródott fotonok száma, $n$ a szórócentrumok száma, $j$ a bejövő részecskeáram-sűrűség, $\Omega$ pedig a térszög.
+ 
+\begin{equation}
+	\frac{dN}{dt}(\theta) = n \cdot j \cdot\frac{d\sigma}{d\Omega}(\theta)\Delta\Omega
+	\label{eq:diff_hkm}
+\end{equation}
+Kvantumtérelméleti számításokkal levezethető a Compton-szóródás hatáskeresztmetszetére a Klein-Nishina formula (\ref{eq:KN}. egyenlet, $r_0$ a klasszikus elektronsugár).
+
+\begin{equation}
+	\frac{d\sigma}{d\Omega}(\theta) = \frac{r_0^2}{2}(P-P^2\sin^2{\theta}+P^3)
+	\label{eq:KN}
+\end{equation}
+
+\subsection*{A mérés}
+A méréshez fotonforrásként $^{137}$Cs izotópot használunk ($T_\frac{1}{2}=(11018.3\pm9.5$ nap)), amely az esetek $(94.36\pm 0.20)\%$-ában $\beta^-$-bomlással gerjesztett állapotú $^{137}$Ba-má alakul, majd rövid, $2.55$ perces felezési idővel $E_0=(661.659\pm0.003)keV$ energiájú gamma-sugárzás kíséretében alapállapotba kerül. A sugarat egy kollimátorral a céltárgyra irányítjuk, amely egy plasztik szcintillátor. Ez egyben elektrondetektorként is működik, így koincidencia-módszerrel tudunk mérni. A szórt gamma-fotonokat NaI(Tl) szcintillációs detektorral mérjük. Ennek hatásfoka energiafüggő, így a rugalmatlan szórás következtében ennek a változásával is számolni kell (\ref{eq:hatasfok}.egyenlet).
+
+\begin{equation}
+	\eta(E[MeV])=0.98e^{-4.7E}+0.05E
+	\label{eq:hatasfok}
+\end{equation}
+A szcintillációs kristályban a gamma-fotonok hatására kelezkező felvillanások fotoeffektus során elektront löknek ki, majd fotoelektron-sokszorozó után a jelet egy sokcsatornás analizátor segítségével dolgozzuk fel, így egy energiaspektrumot veszünk fel. 
+
+
+\subsection*{Aktivitás, sugárvédelmi becslések}
+Az izotóp aktivitása 1963. júl. 1.-jén $486.55$ MBq volt, azóta $19 960$ nap telt el\footnote{https://www.timeanddate.com segítségével}. Ez alapján a mérés napján az aktivtása (az eredeti aktivitás hibája nem ismert, így csak a felezési idő hibáját figyelembe véve, ezáltal alulbecsülve (\ref{eq:akt}.egyenlet)):
+
+\begin{equation}
+	A=A_02^{-t/T_{1/2}}=(138.6\pm0.2)MBq
+	\label{eq:akt}
+\end{equation}
+Ebből a teljesítménye:
+\begin{equation}
+	P=A\cdot 0.9436\cdot661.7 keV = (1.387\pm0.2)\cdot10^{-5}W
+	\label{eq:power}
+\end{equation}
+Ez alapján a labor alatt (210 perc) kapható maximális sugárzás ($m=63$ kg-ra):
+\begin{equation}
+	H = Pt/m \simeq 2.8mSv
+\end{equation}
+Ez az érték azonos nagyságrendű az éves átlagos sugárterheléssel, azonban ez azt kívánta volna meg, hogy lenyeljük a sugárzóanyagot. Ezzel szemben, ha $1 m$-re állunk tőle, és a felületemet $0.5$ $m^2$-nek veszem, akkor:
+\begin{equation}
+	H = Pt/m \frac{0.5}{4\pi} \simeq 0.11 mSv
+\end{equation}
+Ez már egy nagyságrenddel kisebb az előbbinél, így az átlagos napi sugárterhelés kb. 17-szerese (szemben az előbbi kb. 420-szorossal).
+A $6$cm ólomárnyékolás hatását is figyelembe véve:
+\begin{equation}
+	H = Pt/m \frac{0.5}{4\pi}\cdot e^{-10} \simeq 5\cdot 10^{-9}Sv
+\end{equation}
+Ez 3 nagyságrenddel kisebb az átlagos napi sugárterhelésnél, így elhanyagolható kockázatot jelent a mérést végzőre.
+
+\newpage
+
+\section*{Mérési eredmények}
+
+\subsection*{A szögfüggés vizsgálata}
+A mérés során $30^\circ$-tól $110^\circ$-ig $10^\circ$-onként kb. $15$ percig vettük fel a szórt fotonok spektrumát. A mérési eredmények \aref{table:nyers}.táblázatban láthatók. Az adatokra és hibáikra\footnote{a beütésszám gyökét vettük az adott csatornához tartozó hibának} a csatornaszám függvényében Gauss-görbét illesztettünk exponenciális háttérrel (\ref{table:nyers}. táblázat, \ref{fig:gauss}. ábra). A táblázatban szereplő hibák az illesztésből eredő bizonytalanságok (statisztikus hiba), melyek a kovarianciamátrix diagonális elemeinek gyökeként számoltunk. Az adatfeldolgozási és az illesztést pythonban a matplotlib könyvtár segítségével végeztük.
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+szög [$^{\circ}$] & csatorna & szórás & terület & csatorna hiba & szórás hiba & terület hiba & idő [t] \\
+\hline
+30 & 89.73 & 3.23 & 166 & 0.37 & 0.23 & 12 & 1224 \\
+\hline
+40 & 82.31 & 3.11 & 173 & 0.36& 0.44 & 35 & 1085 \\
+\hline
+50 & 74.37 & 2.43 & 120 & 0.42 & 0.27 & 13 & 1002 \\
+\hline
+60 & 66.15 & 1.96 & 85 & 0.43 & 0.43 & 26 & 962 \\
+\hline
+70 & 60.63 & 1.93 & 108 & 0.24 & 0.23 & 15 & 1166 \\
+\hline
+80 & 54.49 & 2.31 & 121 & 0.33 & 0.20 & 11 & 1100 \\
+\hline
+90 & 50.92 & 1.67 & 100 & 0.38 & 0.27 & 18 & 977 \\
+\hline
+100 & 46.62 & 1.46 & 101 & 0.19 & 0.13 & 9 & 1113 \\
+\hline
+110 & 42.88 & 1.82 & 155 & 0.34 & 0.31 & 44 & 1098 \\
+\hline
+
+\end{tabular}
+\end{center}
+\caption{Mért adatok és illesztett Gauss-görbék paraméterei a szög függvényében}
+\label{table:nyers}
+\end{table}
+
+
+
+\subsubsection*{Az energia szögfüggése}
+
+A csatornaszám és az energia közt lineáris kapcsolat paramétereinek meghatározása érdekében kiszámoltuk az egyes szögekhez elméletileg tartozó energiaértékeket \aref{eq:compton}. egyenlet segítségével (\ref{tab:E}. táblázat ????. oszlop). A Gauss-csúcsok helyét ennek függvényében ábrázolva (\ref{tab:E}. táblázat ????. oszlop) egyenest kapunk (\ref{fig:E}. ábra). Az illesztés paraméterei:
+\begin{equation}
+sdhfjk
+\end{equation}
+Az illesztésből meghatározható a $\chi^2$ értékek az alábbi formula szerint (\ref{eq:chi}. egyenlet, \ref{tab:E}. táblázat).
+\begin{equation}
+	\chi^2_i=\frac{(y_i-f(x_i))^2}{\Delta y_i^2}
+	\label{eq:chi}
+\end{equation}
+Az illesztést jellemző $\chi^2=$. 9 mérési adat mellett és 2 illesztendő paraméterrel a szabadsági fokok száma 8, az így a relatív $\chi^2_r=$. Ez a scipy.stats könyvtár segítségével kiszámolva ????-os konfidenciaszintnek felel meg.
+
+\begin{figure}[!htb]
+    \centering
+    \begin{minipage}{.49\textwidth}
+        \centering
+        \includegraphics[width=1.\linewidth]{30fit.png}
+    \end{minipage}
+    \begin{minipage}{.49\textwidth}
+        \centering
+        \includegraphics[width=1.\linewidth]{40fit.png}
+    \end{minipage}
+    \begin{minipage}{.49\textwidth}
+        \centering
+        \includegraphics[width=1.\linewidth]{50fit.png}
+    \end{minipage}%
+    \begin{minipage}{.49\textwidth}
+        \centering
+        \includegraphics[width=1.\linewidth]{60fit.png}
+    \end{minipage}
+
+    \begin{minipage}{.49\textwidth}
+        \centering
+        \includegraphics[width=1.\linewidth]{70fit.png}
+    \end{minipage}%
+    \begin{minipage}{.49\textwidth}
+        \centering
+        \includegraphics[width=1.\linewidth]{80fit.png}
+    \end{minipage}
+
+    \begin{minipage}{.49\textwidth}
+        \centering
+        \includegraphics[width=1.\linewidth]{90fit.png}
+    \end{minipage}
+    \begin{minipage}{.49\textwidth}
+        \centering
+        \includegraphics[width=1.\linewidth]{100fit.png}
+    \end{minipage}
+        \end{figure}
+\clearpage
+
+\begin{figure}[!htb]
+\centering
+    \begin{minipage}{.49\textwidth}
+        \centering
+        \includegraphics[width=1.\linewidth]{110fit.png}
+    \end{minipage}
+    \caption{Gauss-görbe (kék) illesztése a mért adatokra (sárga) különböző szögeknél}
+    \label{fig:gauss}
+\end{figure}	
+
+
+
+A fenti számolás csupán a statisztikus hibákat vette figyelembe, azonban az egyenesillesztésből adódóan az $a$ és $b$ paraméterek hibái korrelált szisztematikus hibákként jelennek meg. Ezt figyelembevéve a fenti $\chi^2$ értéket kiszámoltuk a szisztematikus hibák figyelembevételével is \aref{eq:syst}. egyenlet szerint $\varepsilon=\pm 1$ értékek eseténél. Ekkor a $\chi^2_1=$, $\chi^2_{-1}=$,  a konfidenciaszintekre pedig $CL_1 =$ és $CL_{-1}=$ adódtak.
+\begin{equation}
+	\chi^2_i=\frac{(y_i-f(x_i)+\varepsilon\cdot\delta y_{sys})^2}{\Delta y_i^2}
+	\label{eq:syst}
+\end{equation}
+
+\subsubsection*{A differenciális hatáskeresztmetszet szögfüggése}
+A hatáskeresztmetszet meghatározásához először az illesztett Gauss-görbék alatti területből, a mérés időtartamából és \aref{eq:hatasfok}. egyenletből\footnote{A hatásfok számolásához az elméleti energiákat használtuk.} meghatároztuk az egységnyi idő alatt bejövő fotonszámot (\ref{tab:KN}.táblázat). Erre  illesztettünk a Klein-Nishina formula szerinti görbét, annak konstans együtthatóját (K) szabad paraméterként kezelve(\ref{fig:KN}. ábra). Az illesztés eredménye: $K=(1.21\pm0.05)s^{-1}$, $\chi^2=11.0$, amelyhez tartozó konfidenciaszint $CL=0.200$, tehát a Klein-Nishina formulától nem térnek el szignifikáns mértékben adataink.
+
+Felhasználva a differenciális hatáskeresztmetszet definícióját (\ref{eq:diff_hkm}.egyenlet), illetve a Klein-Nishina formula együtthatóját K az alábbi módon adódik (\ref{eq:K}. egyenlet első fele). Az egységnyi felületre jutó szórócentrumok száma meghatározható a minta részecskenyaláb irányú hosszából ($dx=1.58$ $cm$), sűrűségéből ($\rho=1.03$ $g\cdot cm^{-3}$), moláris tömegéből ($M=14$ $g\cdot mol^{-1}$), molekuláiban lévő elektronszámból ($Z=8$). A térszöget és a részecskeáram-sűrűséget a számolt aktivitásból és a geometriai elrendezésből lehet becsülni. Mivel a detektor a szórócentrumtól $l=18.48$ $cm$-re van, átmérője $d=4.81$ $cm$, ezért $\Delta\Omega = r^2\pi/l^2=0.0532$ $sr$. A részecskeáram $h=13.95$ $cm$ hosszú és $r=0.3$ $cm$ sugarú kollimátoron keresztül éri el a szórócentrumot, ezt felhasználva és pontszerű forrást feltételezve $I=(16025\pm23)$ $s^{-1}$. Mindezt felhasználva K becsült értéke:
+
+\begin{equation}
+	K=\frac{r_0^2nj\Delta\Omega}{2}=\frac{r_0^2Idx\rho N_A Z\Delta\Omega}{2M}\simeq19
+	\label{eq:K}
+\end{equation}
+A számolt és mért érték közti nagyságrendi eltérést okozhatja a forrás nem pontszerű volta, ami miatt a sugárzás nagy része elnyelődik a tartóban. Emiatt a klasszikus elektronsugár becslése (amennyiben azt tekintjük változónak) lehetetlenné válik a bejövő részecskeáram pontosabb ismerete nélkül.
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+szög[$^{\circ}$] &  $\eta$ & $\frac{1}{\eta}\frac{dN_{\text{mért}}}{dt}$ [$s^{-1}$] & $\Delta\left(\frac{1}{\eta}\frac{dN_{\text{mért}}}{dt}\right)$ [$s^{-1}$] & illesztett függvény [$s^{-1}$]& $\chi^{2}$ \\
+\hline
+30 & 0.0974 & 1.39 & 0.10 & 1.34 & 0.27 \\
+\hline
+40 & 0.115 & 1.38 & 0.28 & 1.02 & 1.76 \\
+\hline
+50 & 0.140 & 0.859 & 0.089 & 0.779 & 0.79 \\
+\hline
+60 & 0.169 & 0.522 & 0.160 & 0.618 & 0.36 \\
+\hline
+70 & 0.200 & 0.460 & 0.063 & 0.511 & 0.66 \\
+\hline
+80 & 0.234 & 0.471 & 0.044 & 0.442 & 0.45 \\
+\hline
+90 & 0.267 & 0.381 & 0.069 & 0.397 & 0.05 \\
+\hline
+100 & 0.298 & 0.303 & 0.028 & 0.367 & 5.09 \\
+\hline
+110 & 0.327 & 0.391 & 0.034 & 0.348 & 1.61 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Hatásfok, hatásfokkal súlyozott beütési gyakoriság, valamint az arra illesztett függvény ($K\cdot (P-P^2\sin^2{\theta}+P^3)$) értékei és a hozzájuk tartozó $\chi^2$.}
+\label{tab:KN}
+\end{table}
+
+ 
+ \begin{figure}[!htb]
+ 	\begin{center} 
+		\includegraphics[width=1.\linewidth]{klein_nish.png}
+ 	\end{center}
+\caption{A hatásfokkal súlyozott beütési gyakoriság szügfüggése, és az illesztett görbe}
+ \label{fig:KN}
+ \end{figure}
+ \end{document}
