@@ -82,7 +82,7 @@ ahol $\vartheta$ az foton szórási szögét, $E_{0}$ annak kezdeti energiáját
 \par Bevezetve a $P = \frac{E}{E_{0}}$ arányszámot, az elméleti differenciális hatáskeresztmetszet felírható
 
 \begin{equation*}
-	\frac{d\Sigma}{d\Omega} = \frac{1}{2}r_{0}^{2}(P - P^{2}sin^{2}\vartheta + P^{3})
+	\frac{d\sigma}{d\Omega} = \frac{1}{2}r_{0}^{2}(P - P^{2}sin^{2}\vartheta + P^{3})
 \end{equation*}
 
 alakban. Ahol $r_{0}$ a klasszikus elektronsugár, melynek értéke a Bohr-modell alapján számolható
@@ -237,6 +237,97 @@ terület & 140.79 & 12.97 & 9.2 \\
 \end{tabular}
 \end{center}
 
+\par Ez alapján a csúcsnak és annak szórásának nincs számottevő szisztematikus hibája, míg a területnek igen. Ez betudható annak, hogy az exponenciális háttér ezt befolyásolja a legjobban.
 
+\newpage
+
+\par Ezután a csúcsok helyeinek ismerétében el lehet végezni az energia kalibrációt. Ehhez egy $x = E\times a + b$ összefüggést használtunk, ahol $x$ a csatornaszám. Az elméleti energiákat kiszámítva végeztük el az illesztést.
+
+\begin{figure}[!htb]
+    \begin{minipage}{.39\textwidth}
+    \begin{center}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		csatorna & hiba & $E_{\text{elméleti}}$ \\
+		\hline
+		89.73 & 0.3738 & 563.82 \\
+		\hline
+		82.305 & 0.36105 & 507.78 \\
+		\hline
+		74.374 & 0.42373 & 452.36 \\
+		\hline
+		66.148 & 0.42954 & 401.58 \\
+		\hline
+		60.631 & 0.24439 & 357.22 \\
+		\hline
+		54.489 & 0.33175 & 319.59 \\
+		\hline
+		50.916 & 0.37857 & 288.27 \\
+		\hline
+		46.6247 & 0.18966 & 262.55 \\
+		\hline
+		42.805 & 0.195 & 241.64 \\
+		\hline
+	\end{tabular}
+	\end{center}
+	\end{minipage}
+    \begin{minipage}{.69\textwidth}
+        \centering
+        \includegraphics[width=1.\linewidth]{../notebook/Kalib.png}
+    \end{minipage}
+\end{figure}
+
+\par Itt az illesztett paraméterek értéke $a = (0.1458 \pm 0.00167) ~{1/keV}$, míg $b = (8.08748 \pm 0.5751)$. Ellenben, nekünk nem ezekre az adatokra, hanem ezek inverzére volt szükségünk így azokat véve, és a hibaterjedést figyelembe véve kapjuk, hogy
+
+\begin{gather*}
+	E = A x + B \\
+	A = \frac{1}{a} = (6.857 \pm 0.079) ~keV \\
+	B = -\frac{b}{a} = (-55.453 \pm 4.578) ~keV
+\end{gather*}
+
+\par Így kiszámolva a mért energiákat és azok hibáját
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+$E_{\text{elméleti}}$ & $E_{\text{mért}}$ & $\Delta E_{\text{mért}}$ \\
+\hline
+563.822 & 559.789 & 2.56299 \\
+\hline
+507.789 & 508.879 & 2.47557 \\
+\hline
+452.366 & 454.5 & 2.90534 \\
+\hline
+401.59 & 398.097 & 2.94518 \\
+\hline
+357.226 & 360.269 & 1.67568 \\
+\hline
+319.597 & 318.156 & 2.27467 \\
+\hline
+288.279 & 293.658 & 2.5957 \\
+\hline
+262.552 & 264.234 & 1.30042 \\
+\hline
+241.641 & 238.044 & 1.33704 \\
+\hline
+\end{tabular}
+\end{center}
+
+\par Ekkor kiszámolva $\chi^{2}$-et erre nagyjából $21.5$-et kapunk. Az ereményt az alábbi képletbe helyettesítve számoltuk
+
+\begin{equation*}
+	\chi^{2} = \sum_{i}\frac{(E_{\text{mért}, i} - E_{\text{elméleti}, i} + \epsilon E_{\text{szisztematikus} , i})^{2}}{(\Delta E_{\text{mért,i}})^{2}}
+\end{equation*}
+
+\par Ahol az energia szisztematikus hibáját a kalibrációs egyenes illesztési hibájából számoltuk. A konfidencia szint a $(9-2)$ szabadsági fokú rendszerre ekkor $0.3\%$, aminek számításához a $scipy$ köyvtárat használtuk. Természetesen ezt az értéket $\epsilon = 0~$-nál vettük.
+
+\subsection{Klein-Nishina formula vizsgálata}
+\par Ehhez felhasználjuk az elméleti összefoglalóban említett képletet
+
+\begin{equation*}
+	\frac{d\sigma}{d\Omega} = \frac{1}{2}r_{0}^{2}(P - P^{2}sin^{2}\vartheta + P^{3})
+\end{equation*}
+
+\par Itt felhaználjük az illesztett Gauss-görbék területét, amelyet illesztési paraméterként megkaptunk. 
 
 \end{document}
