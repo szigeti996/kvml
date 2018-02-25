@@ -218,6 +218,8 @@ szög [$^{\circ}$] & csatorna & szórás & terület & csatorna hiba & szórás h
     \end{minipage}
 \end{figure}
 
+\newpage
+
 \par Az illesztés szisztematikus hibájának számításához 23 esetet néztünk végig. Az illesztés alsó szélétől és felső szélétől $\pm 5$ és a két legszélső helyzetet. Ezt csak a $110^{\circ}$-os esetre vizsgáltuk, a feltevés az, hogy a többi illesztés is ugyan ilyen relatív hibával rendelkezik.
 
 \begin{center}
@@ -234,5 +236,7 @@ terület & 140.79 & 12.97 & 9.2 \\
 
 \end{tabular}
 \end{center}
+
+
 
 \end{document}
