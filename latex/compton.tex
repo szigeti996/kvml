@@ -66,9 +66,14 @@
 
 \subsection{Mérési elrendezés}
 
+\par A mérési elrendezésről néhány kép, ahonnan a felhasznált adatokat vettük.
 
+\vspace{1cm}
 
-\vspace{2cm}
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=0.86\textwidth]{meresi.png}
+\end{figure}
 
 \section{Elméleti összefoglaló}
 
@@ -186,6 +191,8 @@ szög [$^{\circ}$] & csatorna & szórás & terület & csatorna hiba & szórás h
         \centering
         \includegraphics[width=1.\linewidth]{../plots/withbackground/40_1085fit.png}
     \end{minipage}
+\end{figure}
+\begin{figure}[!htb]
     \begin{minipage}{.49\textwidth}
         \centering
         \includegraphics[width=1.\linewidth]{../plots/withbackground/50_1002fit.png}
@@ -194,8 +201,6 @@ szög [$^{\circ}$] & csatorna & szórás & terület & csatorna hiba & szórás h
         \centering
         \includegraphics[width=1.\linewidth]{../plots/withbackground/60_962fit.png}
     \end{minipage}
-\end{figure}
-\begin{figure}[!htb]
     \begin{minipage}{.49\textwidth}
         \centering
         \includegraphics[width=1.\linewidth]{../plots/withbackground/70_1166fit.png}
@@ -239,8 +244,6 @@ terület & 140.79 & 12.97 & 9.2 \\
 
 \par Ez alapján a csúcsnak és annak szórásának nincs számottevő szisztematikus hibája, míg a területnek igen. Ez betudható annak, hogy az exponenciális háttér ezt befolyásolja a legjobban.
 
-\newpage
-
 \par Ezután a csúcsok helyeinek ismerétében el lehet végezni az energia kalibrációt. Ehhez egy $x = E\times a + b$ összefüggést használtunk, ahol $x$ a csatornaszám. Az elméleti energiákat kiszámítva végeztük el az illesztést.
 
 \begin{figure}[!htb]
@@ -273,7 +276,7 @@ terület & 140.79 & 12.97 & 9.2 \\
 	\end{minipage}
     \begin{minipage}{.69\textwidth}
         \centering
-        \includegraphics[width=1.\linewidth]{../notebook/Kalib.png}
+        \includegraphics[width=1.\linewidth]{ch_en.png}
     \end{minipage}
 \end{figure}
 
@@ -288,28 +291,17 @@ terület & 140.79 & 12.97 & 9.2 \\
 \par Így kiszámolva a mért energiákat és azok hibáját
 
 \begin{center}
-\begin{tabular}{|c|c|c|c|}
-\hline
-$E_{\text{elméleti}}$ & $E_{\text{mért}}$ & $\Delta E_{\text{mért}}$ & $\chi^{2}$ \\
-\hline
-563.822 & 559.789 & 2.56299 & 2.48 \\
-\hline
-507.789 & 508.879 & 2.47557 & 0.19\\
-\hline
-452.366 & 454.5 & 2.90534 & 0.54\\
-\hline
-401.59 & 398.097 & 2.94518 & 1.41\\
-\hline
-357.226 & 360.269 & 1.67568 & 3.3\\
-\hline
-319.597 & 318.156 & 2.27467 & 0.4\\
-\hline
-288.279 & 293.658 & 2.5957 & 4.29\\
-\hline
-262.552 & 264.234 & 1.30042 & 1.67\\
-\hline
-241.641 & 238.044 & 1.33704 & 7.24\\
-\hline
+\begin{tabular}{|c| c| c| c|}\hline
+$\phi$ [$^{\circ}$] & $\text{elméleti energia}$ [keV] & $\text{mért energia}$ [keV] & $\chi^{2}$ \\ \hline
+30 & 563.8223 & 559.7893&2.4760 \\ \hline
+40 &507.7891 &508.8791&0.1938 \\ \hline
+50 &452.3664 &454.4995&0.5390\\ \hline
+60&401.5895 &398.0972&1.4060\\ \hline
+70&357.2257 &360.2694&3.2993\\ \hline
+80& 319.5971&318.1562&0.4012\\ \hline
+90& 288.2794&293.6576&4.2930\\ \hline
+100&262.5517 &264.2339&1.6734\\ \hline
+110&241.6414 &238.0438&7.2402\\ \hline
 \end{tabular}
 \end{center}
 
@@ -320,6 +312,11 @@ $E_{\text{elméleti}}$ & $E_{\text{mért}}$ & $\Delta E_{\text{mért}}$ & $\chi^
 \end{equation*}
 
 \par Ahol az energia szisztematikus hibáját a kalibrációs egyenes illesztési hibájából számoltuk. A konfidencia szint a $(9-2)$ szabadsági fokú rendszerre ekkor $0.3\%$, aminek számításához a $scipy$ köyvtárat használtuk. Természetesen ezt az értéket $\epsilon = 0~$-nál vettük.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=0.86\textwidth]{en_deg.png}
+\end{figure}
 
 \subsection{Klein-Nishina formula vizsgálata}
 \par Ehhez felhasználjuk az elméleti összefoglalóban említett képletet
@@ -361,9 +358,7 @@ szög[$^{\circ}$] &  $\eta$ & $\frac{1}{\eta}\frac{dN_{\text{mért}}}{dt}$ [$s^{
 
 \par Hatásfok, hatásfokkal súlyozott beütési gyakoriság, valamint az arra illesztett függvény ($K\cdot (P-P^2\sin^2{\theta}+P^3)$) értékei és a hozzájuk tartozó $\chi^2$.
 
-\newpage
-
-\begin{figure}
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=0.86\textwidth]{../notebook/klein-nishina.png}
 \end{figure}
@@ -371,6 +366,6 @@ szög[$^{\circ}$] &  $\eta$ & $\frac{1}{\eta}\frac{dN_{\text{mért}}}{dt}$ [$s^{
 \par Ahol $K = 2.26 10^{-26}~cm^{-2}s^{-1}$, a mérés leírásából lett véve. Esetünkben 9 szabadsági fokkal számolva a $\chi^{2}$-ek összege $11.04$ lett, ebből a konfidencia szint nagyjából $20\%$-os.
 
 \section{Összefoglalás}
-\par Úgy gondoljuk, hogy a konfidencia szinte jelentős mértékben növelhető volna, ha több ideig mérnénk egy-egy szögnél, hiszen ekkor a csúcsaink több beütést tartalmaznának és így a statisztikus hiba, valamint az illesztésből származó hiba csökkenthető lenne. Mindezek ellenére a mérés sikeresnek tekinthető.
+\par Úgy gondoljuk, hogy a konfidencia szinte jelentős mértékben növelhető volna, ha több ideig mérnénk egy-egy szögnél, hiszen ekkor a csúcsaink több beütést tartalmaznának és így a statisztikus hiba, valamint az illesztésből származó hiba csökkenthető lenne. Meglepődve tapasztaltuk, hogy ilyen alacsony konfidencia szintet sikerült csak produkálnunk, viszont a példa feladatok alapján megnyugodtunk, hiszen ott is csak $0,4\%$-os szint volt. Feltételezzük, hogy ennek elérése is komoly kiértékelési pontosságot követel meg, hiszen mi is próbáltunk a lehető legpontosabban eljárni a számolások, illesztések során. Így a mérés sikeresnek tekinthető.
 
 \end{document}
