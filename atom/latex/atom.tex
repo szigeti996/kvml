@@ -86,11 +86,98 @@
 
 \section{Mérési feladatok, a mérés menete}
 
-\par A mérés során először meghallgattunk egy előadást a reaktorról, annak történetéről és felépítéséről, valamint átbeszéltük, hogy milyen detektorokkal üzemel a reaktor.
+\par A mérés során először meghallgattunk egy előadást a reaktorról, annak történetéről és felépítéséről, valamint átbeszéltük, hogy milyen detektorokkal üzemel a reaktor. 
 
-\par 
+\vspace{.5cm}
+
+\par Két fős csoportokban indítottuk el a reaktort, vittük fel a rekaciót különböző teljesítményekig, majd állítottuk azt le. Az utolsó csoport elment egészen $100kW$-ig. Az indítás során több dologra figyelni kell. Először a biztonsági rudakat kell kiemelni, hogy a reakció egyáltalán elindulhasson. Ezután a szabályozó rudakat állítottuk amiből két fajta volt, egy kézi és egy automata rúd. Ezeket manuálisan állította a mérőpár egyik tagja, miközben két műszert figyelt. Ezen műszerek jelezték a beütések számát másodpercenként (pps - pulses per second). Ezek a két impulzus üzemű detektorhoz (I1, I2) vannak kötve. Később a periódusidő leolvasására szolgáló kijelzőt is használtuk. 
+
+\vspace{.5cm}
+
+\par Először $1~W$-ig ment fel a reaktorral az első csoport, ekkor a kritkusság elérése során átkapcsolták a szabályozó rudak állítását automata üzemmódba, amikor is az automata szabályozó rudat már a rendszer állítja, hogy kritikus állapotban tartsa a reakciót. Először behelyezték a neutron forrást, ami a reakció beindításához szükséges, majd ezt $10 W$-nál el is távolítottuk. A mért szabályozó rúd pozíciók $1 W$ teljesítményen, a forrás jelenlétében, miután beállt az egyensúlyi helyzet
+
+\begin{center}
+\begin{tabular}{|c|c|} \hline
+Automata rúd [mm] & Kézi rúd [mm] \\ \hline
+429 & 400 \\ \hline
+\end{tabular}
+\end{center}
+
+\par Ezután leállították a reakciót, egy másik csoport pedig a forrás jelenlétében elvégezte az előbbi műveleteket. Ekkor már $10~W$-ra kellett felvinni a reaktor teljesítményt. A kritikus szint elérésekor első a forrás jelenlétében ugyanazokat a rúd pozíciókat kaptuk, hiszen csak a teljesítmény változott.
+
+\begin{center}
+\begin{tabular}{|c|c|} \hline
+Automata rúd [mm] & Kézi rúd [mm] \\ \hline
+429 & 400 \\ \hline
+\end{tabular}
+\end{center}
+
+\vspace{.2cm}
+
+\begin{center}
+\begin{tabular}{|c|c|} \hline
+$I_{1} (pps)$ & $I_{2}$ (pps) \\ \hline
+$10^{4}$ & $2.2 \cdot 10^{4}$ \\ \hline
+\end{tabular}
+\end{center}
+
+\par Ezután a kézi rudat felvittük egészen $460~mm$-ig, miután az automata rúd beállt $316~mm$-re. Mindezt a forrás jelenlétében.
+
+\par Majd miután kivettük a forrást
+
+\begin{center}
+\begin{tabular}{|c|c|} \hline
+Automata rúd [mm] & Kézi rúd [mm] \\ \hline
+364 & 460 \\ \hline
+\end{tabular}
+\end{center}
+
+\par Ekkor leolvastuk a kétszerezési időt, amelyből a rudat értékessége $11.95~cent$-nek adódott. \footnote{Itt sajnos elfelejtettük felírni, hogy mekkora volt ez az idő, talán $5.95~s$, de nem tudom elolvasni a lapra felírtakat.}
+
+\par Ezután felvittük a teljesítményt $100~W$-ra egy teljes leállás után, amit a kadmium rudak beejtésével értünk el, itt már a forrást eltávolítottuk. Ekkor a mért adatok
+
+\begin{center}
+\begin{tabular}{|c|c|} \hline
+Automata rúd [mm] & Kézi rúd [mm] \\ \hline
+471 & 400 \\ \hline
+\end{tabular}
+\end{center}
+
+\vspace{.1cm}
+
+\begin{center}
+\begin{tabular}{|c|c|} \hline
+$I_{1} (pps)$ & $I_{2}$ (pps) \\ \hline
+$1.2 \cdot 10^{5}$ & $2.2 \cdot 10^{6}$ \\ \hline
+\end{tabular}
+\end{center}
+
+\par A rudak értékessége ekkor $5.97~cent$-nek adódott, amihez $127~s$ kétszerezési idő tartozott. Ezeket az adatokat a helyben biztosított táblázatokból olvastuk ki. Ezután elkezdetük a teljesítményt léptetni, hogy meg tudjuk vizsgálni a detektorokban a beütésszám bizonyos szintig lineáris változását. Az egyik detektor egy ionizációs kamra elvén működik, tehát amíg proporcionális üzemű, addig a beütésszámmal egyenesen arányosan nő a teljesítmány is, ez jól látszik $200~W$-os és $1~kW$-os üzemnél.
+
+\begin{center}
+\begin{tabular}{|c|c|} \hline
+$I_{1} (pps)$ & $I_{2}$ (pps) \\ \hline
+$2.2 \cdot 10^{5}$ & $4.4 \cdot 10^{5}$ \\ \hline
+\end{tabular}
+\end{center}
+
+\vspace{.1cm}
+
+\begin{center}
+\begin{tabular}{|c|c|} \hline
+$I_{1} (pps)$ & $I_{2}$ (pps) \\ \hline
+$1.2 \cdot 10^{6}$ & $1.1 \cdot 10^{6}$ \\ \hline
+\end{tabular}
+\end{center}
+
+\par Az utóbbi esetben a szabályozó rudak 337 mm (automata), 460 mm (kézi). Viszont ezt a lineáris tulajdonságot, már $2~kW$-nál sem produkálja a rendszer az előbbi okok miatt. Végül $10~kW$-nál a rudak állása az előbbi sorrendben, rendre, 400 és 483 mm. Ekkor sétáltunk ki a reaktor tetejére, hogy megszemléljük a Cserenkov-sugárzást élőben is, majd később kamerával is beláttunk a reaktor térbe.
+
+\begin{center}
+\includegraphics[width=0.48\textwidth]{../data/cherenkov.jpg}
+\end{center}
 
 \section{Összefoglalás}
-\par 
+
+\par Az idei laboratóriumi mérések mégha kifejezetten csak nehezítik is egy végzős hallgató mindennapjait, a mostani mérések kifejezetten értelmesek és hasznosak. Ezt a gyakorlatot egy élmény volt végigcsinálni. Maradandó emlék marad, amikor kamerával ténylegesen láttuk, hogy a reakció hirtelen leálltával megszűnik a Cserenkov-sugárzás.
 
 \end{document}
