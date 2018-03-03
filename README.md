@@ -1,4 +1,4 @@
-# Compton
-Compton-szórás mérése - Labor
+# Korszerű vizsgálati módszerek laboratórium
 
-* compton.ipynb
+* korszerű a fenéket
+* ellenben eddig ez a legértelmesebb labor, mert ezt már tényleg értjük
