@@ -1,0 +1,96 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[hungarian]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{a4paper,
+		     tmargin = 35mm, 
+		     lmargin = 25mm,
+		     rmargin = 30mm,
+		     bmargin = 30mm}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{setspace}
+\usepackage{amsmath,amssymb}
+\usepackage{float}
+
+
+\usepackage{indentfirst}
+\usepackage{subfig}
+
+\renewcommand\thesection{\Roman{section}}
+
+\begin{document}
+
+\linespread{1.2}
+
+\begin{titlepage}
+
+	\centering
+	\includegraphics[width=0.66\textwidth]{elte.jpg}\par\vspace{1cm}
+	{\scshape\LARGE ELTE TTK \par}
+	\vspace{3cm}
+	{\scshape\Large Reaktor üzemeltetési gyakorlat\par}
+	\vspace{1cm}
+	{\large\itshape Olar Alex\par}
+	\vspace{3cm}
+	{\large 2018 \par}
+	
+\end{titlepage}
+
+\begin{abstract}
+\par A mérés célja az volt, hogy megismerkedjünk a reaktor üzemeltetéshez szükséges berendezésekkel. Ezek közé tartoznak a biztonságért felelős és mérő műszerek is. A gyakorlat során elindítottuk az önfenntartó láncreakciót és kritikussá tettük a reaktort, valamint vészleállást is kiviteleztünk.
+\end{abstract}
+
+\vfill
+
+\tableofcontents
+
+\newpage
+
+\section{Elméleti összefoglaló}
+
+\par A termikus reaktorok $^{235}U$-ös uránnal üzemelnek, amit dúsítani kell, hiszen a természetben ezen urán izotóp részaránya $0.7\%$. Maghasadáskor nagy energiás neutronok keletkeznek, amelyeket termikussá kell tenni, hiszen ekkor a hasító hatáskeresztmetszetük nagyságrendekkel nagyobb. Ezt a célt szolgálja a moderátor anyag, ami a BME tanuló reaktorában $H_{2}O$, azaz víz. Ezen felül a reaktorban grafit reflektorok is találhatóak, amelyek nem moderálnak, hanem a reaktorból kiszökő neutronok számát hivatottak csökkenteni.
+
+\vspace{1cm}
+
+\par Az önfenntartó láncreakció jellemzésére szolgál a kritkusság számszerű jellemzése. Ehhez először bevezetjük a négyfaktor formulát
+
+\begin{equation*}
+	k_{eff} = \epsilon \cdot p \cdot f \cdot \eta \cdot P
+\end{equation*}
+
+\par ahol $\epsilon$ a gyorsneutronok által okoztt $^{238}U$ hasadások járuléka, $p$ a rezonancia tényező, ami a neutron befogást jellemzi, $f$ a termikus neutronok hasadásba lépő százalékos arányát jellemzi, $\eta$ a termikus neutronhozam, végül $P$ a kilépési tényező, ennek csökkentésé szolgál a grafit reflektor réteg.
+
+\par Ha $k_{eff} < 1$, a rekator szunkritikus, ha nagyobb, akkor szuperkritikus, ha az értéke $1$ akkor a reaktor kritikus.
+
+\par Az ettől való relatív eltérés jellemzésére szolgál a reaktivitás
+
+\begin{equation*}
+	\rho = \frac{k_{eff} - 1}{k_{eff}}
+\end{equation*}
+
+\par A lancreakció kritikussá tételéhez elengedhetetlenek a késő neutronok, hiszen kockázatos, ha a reaktort már a prompt neutronok is kritikussá tehetik. Ezért érdemes bevezetni a $\frac{\rho}{\beta_{eff}}$ arányt, ahol $\beta_{eff}$ a késő neutronok részaránya. Ennek 'mértékegysége' a $\$$. Az Oktatóreaktor maximális reaktivitása $0.8\$$ körüli.
+
+\vspace{1cm}
+
+\par További biztonsági funkció, hogy a reaktor alulmoderált, azaz ha hirtelen felfutna a láncreakció önmagát leállító módon üzemel, hiszen a felmelegedő moderátor anyag sűrűsége csökken így közvetlenül csökken ennek hatására az effektív sokszorozási tényező, hiszen kevesebb termikus neutron lesz.
+
+\vspace{1cm}
+
+\par Érdemes még megemlíteni, hogy az Oktatóreaktor maximális teljesítménye $100kW$, és még közel $10$ évig biztosan van engedélye az üzemelésre így ezentúl is további diákok látogathatják a létesítményt laborgyakorlat keretében.
+
+\newpage
+
+\section{Mérési feladatok, a mérés menete}
+
+\par A mérés során először meghallgattunk egy előadást a reaktorról, annak történetéről és felépítéséről, valamint átbeszéltük, hogy milyen detektorokkal üzemel a reaktor.
+
+\par 
+
+\section{Összefoglalás}
+\par 
+
+\end{document}
