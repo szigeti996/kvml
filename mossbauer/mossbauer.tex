@@ -1,0 +1,85 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[hungarian]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{a4paper,
+		     tmargin = 35mm, 
+		     lmargin = 25mm,
+		     rmargin = 30mm,
+		     bmargin = 30mm}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{setspace}
+\usepackage{amsmath,amssymb}
+\usepackage{float}
+
+
+\usepackage{indentfirst}
+\usepackage{subfig}
+
+\renewcommand\thesection{\Roman{section}}
+
+\begin{document}
+
+\linespread{1.2}
+
+\begin{titlepage}
+
+	\centering
+	\includegraphics[width=0.66\textwidth]{elte.jpg}\par\vspace{1cm}
+	{\scshape\LARGE ELTE TTK \par}
+	\vspace{3cm}
+	{\scshape\Large Mössbauer-effektus vizsgálata\par}
+	\vspace{1cm}
+	{\large\itshape Olar Alex\par}
+	\vspace{3cm}
+	{\large 2018 \par}
+	
+\end{titlepage}
+
+\begin{abstract}
+\par A mérés célja az volt, hogy megismerkedjünk a legpontosabb energia mérési módszerrel a magfizikában, azaz a Mössbauer-effektussal. Ennek során különböző minták energiaátmeneteit vizsgáltuk, elektromos és mágneses térben.
+\end{abstract}
+
+\vfill
+
+\tableofcontents
+
+\newpage
+
+\section{Elméleti összefoglaló}
+
+\par Gerjesztett állapotó atommagok elektromágneses sugárzást bocsáthatnak ki, gamma-sugárzás formájában, amikor alacsonyabb energiaszintre kerülnek. Ennek során a kibocsátott $\gamma$-foton energiája már kisebb, mint egy ugyanilyen mag gerjesztéséhez szükséges energia, hiszen az anyamag visszalökődik. Ahhoz, hogy a kibocsátott foton újra gerjeszteni tudjun a természetes vonalszélességét (energiájának bizonytalanságát) kell növelni. A labor során használt módszer egy hangfalhoz kötötte a mintákat, amiket az állandó gyorsulással rezgetett. A fotonok Doppler-effektusa okozta a vonalkiszélesedést. Így a fotonok már újra el tudtak nyelődni. Az anyagok vizsgálata során elektromos és mágneses térbe is helyezzük a mintákat, vizsgálva például ezáltal a Zeemann-felhasadást.
+
+\vspace{5mm}
+
+\par A Doppler-effektus a sebességgel arányos
+
+\begin{equation*}
+	\Delta E = E\sqrt{\frac{c+v}{c-v}} - E \approx E\frac{v}{c}
+\end{equation*}
+
+\par Azaz a sebességgel arányos a vonalkiszélesedés. A mérés egy sokcsatornás analizátorra van kötve, amely pedig egy proporcionális kamráról kapja az impulzusokat. Ez az $^{57}Co$ $14.4~keV$-es $\gamma$-fotonjaira érzékeny, amivel a mintát besugározzuk. A mérési berendezés része egy diszkriminátor is, amely a kisebb és nagyobb energiájú fotonokat nem engedi a sok csatornás analizátorra. A spektrum mérése számítógéppel történt a különböző minták behelyezése után.
+
+\section{Mérési eszközök}
+
+\begin{itemize}
+\item sokcsatornás anlizátor kártya
+\item számítógép
+\item diszkriminátor
+\item $^{57}Co$, valamint $\text{nátriumprusszid}$,
+$\text{lágyvas}$ és $\text{rozsdamentes-acél}$ minták
+\end{itemize}
+
+\section{A mérés menete}
+
+\par Először a diszkriminátort állítottuk a megfelelő tartományba, hogy ténylegesen csak a $14.4~keV$-es fotonokat észleljük. 
+
+\section{Összefoglalás}
+
+\par 
+
+\end{document}
