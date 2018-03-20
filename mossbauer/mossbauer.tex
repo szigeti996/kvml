@@ -316,6 +316,103 @@ Intenzitás & $\Gamma_{\text{mért}}^{(i)}$ [$10^{-9}$ eV] & $\Gamma_{\text{mér
 \frac{\partial^{2}V}{\partial z^{2}} = 1.95 \cdot 10^{22} ~\frac{V}{m^{2}}
 \end{equation*}
 
-\par Azaz közel 1 nagyságrendet tévedtünk, de egészen jól megközelítettük a Bohr-modellben prezentált elméleti értéket. 
+\par Azaz közel 1 nagyságrendet tévedtünk, de egészen jól megközelítettük a Bohr-modellben prezentált elméleti értéket.
+
+\subsection{Az $^{57}Fe$ vas mágneses momentuma, másneses térbeli felhasadás}
+
+\par A mágneses knvatumszámok szerinti felhasadást a Zeemann-effektus írja le. Az energiaeltolódást az $m$ kvantumszám szerint a következő összefüggés adja meg
+
+\begin{equation*}
+	\Delta E_{m} = -\frac{m_{I}}{I}\mu_{I}B
+\end{equation*}
+
+\par A vizsgált minta energiaszintjei 6 részre hasadnak, amelyek között hat átmenet lehetséges. Az $I = 3/2$ és $I = 1/2$ enegiaszintek közötti energia különbség $\Delta E_{I}$, míg ezek közül a nagyobb 4, míg a kisebb magspinű 2 részre hasad. Az utóbbi energiakülönbsége $\Delta E_{1/2}$, míg az előbbié az egymás mellettiek között $\Delta E_{3/2}$. Így Az átmenetekhez tartozó energiakülönségek táblázatba foglalva
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c| c|} \hline
+Ámenet& Energia értékek paraméterekkel \\ \hline
+$\pm \frac{3}{2}\leftarrow\pm\frac{1}{2}$& $\Delta E_{1/2}$+3$\Delta E_{I}$\\ \hline
+$\pm \frac{1}{2}\leftarrow\pm\frac{1}{2}$& $\Delta E_{1/2}$+$\Delta E_{I}$\\ \hline
+$\pm \frac{3}{2}\leftarrow\mp\frac{1}{2}$& $\Delta E_{1/2}$-$\Delta E_{I}$\\ \hline
+\end{tabular}
+\caption{Energia-átmenetek}
+\end{table}
+
+\par Innen $ N = C\cdot \Delta E + A$ egyenesre illesztést végeztünk, ahol $\Delta E$ az előbbi táblázat második oszlopában lévő energiaadatok, melyek értéke
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c |c|} \hline
+Átmenet & Energiaszint($10^{-9}~eV$)\\ \hline
+$\Delta E_1$ & $509.9\pm0.19$\\ \hline
+$\Delta E_2$ &  $295.98\pm0.16$\\ \hline
+$\Delta E_3$ & $80.56\pm0.33$\\ \hline
+\end{tabular}
+\end{table}
+
+\par Majd az illesztés
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.55\textwidth]{parameterek.png}
+\caption{Zeemann-felhasadás, a mágneses momentum származtatható}
+\end{figure}
+
+\par Tudjuk, hogy alapállapotban $\mu_{1/2} = 0.090604\cdot \mu_{N}$, valamint 
+
+\begin{equation*}
+\Delta E = \frac{\mu_{1/2}B}{I_{1/2}} = A \quad \quad \Delta E = \frac{\mu_{3/2}B}{I_{3/2}} = -C 
+\end{equation*}
+
+\par Ahol $A$ és $C$ az illesztés paraméterei
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|c|c|} \hline
+A [$10^{-9}~eV$] & B [$10^{-9}~eV$] \\ \hline
+(188.145 $\pm$ 0.414) & (107.335 $\pm$ 0.216) \\ \hline
+\end{tabular}
+\end{table}
+
+\par Ebből $\mu_{3/2}$ egy osztás után meghatározható, majd B is számolható
+
+\begin{equation*}
+\mu_{3/2} = (-5.43 \pm 0.13) \cdot 10^{-9} ~\frac{eV}{T} \quad \quad B = (32.94 \pm 0.07) ~T
+\end{equation*}
+
+\par Az elméleti érték a Bohr-modell alapján kapható, amihez képest a mért adat közel háromszoros.
+
+\begin{equation*}
+B_{\text{elméleti}} = \frac{\mu_{0}\hbar c}{m_{e}4\pi r_{Bohr}^{2}} \approx 12.5 ~T
+\end{equation*}
+
+\section{Lehetséges hibák, gravitációs vöröseltolódás}
+
+\par A mérés során az állandónak vett minta-forrás távolság természetesen változik, hiszen pontosan a minta mozgatása miatti Doppler-effektus szélesíti ki az energianívókat. A háromszögjel periódusideje a jegyzet szerint $T = 41.2 \pm 2 ~ms$, a maximális sebesség pedig
+
+\begin{equation*}
+v_{max} = c \frac{\Delta E_{\text{szélső}}}{E_{0}} = (7.418 \pm 0.002) ~\frac{mm}{s}
+\end{equation*}
+
+\par Ahol $E_{szélső}$ a legutolsó 255-ös csatorna energiaszintjéhez tartozó kiszélesedés. A maximális kitérés így $v_{max}\frac{T}{4}$, hiszen a periódusidő negyedénél van maximuma a sebsségnek
+
+\begin{equation*}
+d_{max} = (0.0764 \pm 0.004) ~mm
+\end{equation*}
+
+\subsection{Gravitációs vöröseltolódás}
+
+\par A Föld felszín közeli gravitációs potenciálja $\varphi = gh$. A laborban $0.5$ csatorna pontossággal tudunk mérni ez azt jelenti, hogy a kezdeti $\Delta^{*}$ energia fele lehet a mérés hibája, hogy meg tudjuk határozni a gravitációs vöröseltolódást, amit a potenciálkülönbség miatt szenved el a fény. Így
+
+\begin{equation*}
+h = \frac{\Delta^{*}}{2\cdot E_{\Gamma}}\frac{c^{2}}{g} \approx 440 ~m
+\end{equation*}
+
+\par Ahol $E_{\Gamma}$ a mérésben használt $14.4 ~keV$-es foton energiája. Jól látható, hogy annak ellenére, hogy ezt a '60-as években kimérték, mi nem tudnánk ilyen $\Gamma$-fotonokkal reprodukálni.
+
+\section{Összefoglalás}
+
+\par Ez volt eddig a legnehezebb mérésünk. Kicsit talán sok kiértékelési feladat van, és a feladatok leírásából nem egyszerű rájönni, hogy pontosan hogyan kell végrehajtani a kiértékelést, de általánosságban természetesen nem túl bonyolult feladatokat kaptunk. A hibákat végig hibaterjedéssel számoltuk, a feladatokat közösen értékeltük ki, így az ábráink és néhol a táblázataink megegyezhetnek. Összességében sikeres mérést kiviteleztünk.
 
 \end{document}
