@@ -1,0 +1,27 @@
+#irány szerinti inhomogenitás vízszintes <-->
+# balról mérjük
+# a bizonytalanság 0.2 - Dávid
+1.15	0	
+0.83	0.4
+0.5	0.2
+0.32	-0.6
+0.22	-1.2
+0.1	-2.7
+
+#függőleges - Alex
+3.7	0.6
+3.2	0.8
+2.2	0.8
+5.5	0.7
+5.7	0.8
+7.1	0.6
+
+#vízszintes - Marci
+6	0.7
+6.5	0.7
+7	0.8
+7.5	0.8
+8	0.8
+8.4	1
+8.6	1
+

@@ -1,0 +1,15 @@
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Frekvencia [MHz] & $\Delta$f [kHz] & Indukció [mT] & $\Delta$ B [mT] \\
+\hline
+7.155 & 0.5 & 174.2 & 1.34 \\
+\hline
+6.754 & 0.5 & 164.15 & 1.28 \\
+\hline
+6.167 & 0.5 & 149.08 & 1.16 \\
+\hline
+5.641 & 0.5 & 139.03 & 1.08 \\
+\hline
+\end{tabular}
+\end{center}

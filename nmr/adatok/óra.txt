@@ -1,0 +1,40 @@
+azért jobb a áram generátor mert a mágneses tér úgyis az áram erősségtől függ és ha feszültség generátort használnák az a mágnes hőmérséklete miatt a változó ellenállás álltal nem tudna olyan stabol konstans teret adni .
+a moduláló jelnél ez nem fontos mert annak változhat az amplitúdója
+az áram erősség leolvasás kb 1% de az állító pontossága jobb de nem biztos hogy lineárisan 
+a "szondának" van egy 3.35mT \pm 0.1 mT statisztikus hibája (ez a hitelesítés véges voltából ered)
+
+
+A frekvencia jel generátorában egy kvarz óra van ennek pontssága: 10^-5 nagyságrendű
+
+a mágnesese tér bizonytalálanságát az arányosság miatt miatt jobb frekvenciában mérni
+
+
+
+mérési adatok
+		
+gerjesztő frekvenciája: 5.633 MHz lebegéshez  bekapcsoláshoz 
+			5.633 MHz
+
+------------------------------------
+			
+			5.641 Mhz
+
+az áram erősség(A) -1.57
+ 
+tekerő állása 514 
+
+b. galvanométer (41 42 42)
+
+------------------------------------
+Anyag & Áramerősség(A) & Áram generátor tekerőjének állása & B.galvanométer( (3.35 \pm 0.1) mT) & Lebegési frekvencia\\ 
+Víz   & 1.57 	    &      514                             & 41,42,42                           &      5.641   
+
+
+
+
+
+
+hibák
+mernnyivel változik időben a mágneses tér amíg kicseréljük a mintát 2perc aéatt 0.3 kocka ennek értéke frekvenciában
+2 db kocka értéke (5.667-5.633) 
+a muatató null pozíciója: 0.1
