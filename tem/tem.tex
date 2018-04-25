@@ -179,7 +179,87 @@ L\lambda = (368.16 \pm 0.21) ~pixel\cdot \si{\angstrom}
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=0.45\linewidth]{./Si_Olar.jpg}
-\caption{ Si egykristáky diffrakciós képe }
+\caption{ Si egykristály diffrakciós képe }
 \end{figure}
+
+\vspace{5mm}
+
+\par Jelölve az ábrán a kiértékelt pontokat, majd a legintezívebb ponttól számítva $K(738, 630) ~[px, px]$ kiértékelve azok távolságát, az indexelést elvégeztem.
+
+\vspace{5mm}
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=0.55\linewidth]{./Si_Olar_betuzott.jpg}
+\caption{ Si egykristály diffrakciós képe, a pontok az azonosításhoz betüzve vannak }
+\end{figure}
+
+\vspace{5mm}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+Pont & x [pixel] & y [pixel] & |$\Delta$x| [pixel] & |$\Delta$y| [pixel] & $\Delta$ [pixel] & d [$\si{\angstrom}$] & $\Delta$d [$\si{\angstrom}$] & index \\
+\hline
+A & 640 & 790 & 98 & 160 & 187.63 & 1.962 & 0.001 & \{220\} \\
+\hline
+B & 858 & 814 & 120 & 184 & 219.67 & 1.676 & 0.001 & \{311\} \\
+\hline
+C & 960 & 652 & 222 & 22 & 223.09 & 1.650 & 0.001 & \{311\} \\
+\hline
+D & 1069 & 490 & 322 & 140 & 351.12 & 1.049 & 0.001 & \{511\} \\
+\hline
+E & 834 & 466 & 96 & 164 & 190.03 & 1.937 & 0.001 & \{220\} \\
+\hline
+F & 618 & 444 & 120 & 186 & 221.35 & 1.663 & 0.001 & \{311\} \\
+\hline
+G & 514 & 608 & 224 & 22 & 225.08 & 1.636 & 0.001 & \{311\} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{5mm}
+
+\par Ez természtesen még nem jó, hiszen így nem adják ki a lineárkombinációk egymást, permutálást és előjelváltást kell végezni a tükrözési és forgatási szimmetriák miátt. Így
+
+\vspace{5mm}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+Pont & x [pixel] & y [pixel] & d [$\si{\angstrom}$] & index & \text{egy vektoriálisan helyes indexelés} \\
+\hline
+A & 640 & 790 &  1.962 &  \{220\} & \{2,2,0\} \\
+\hline
+B & 858 & 814  & 1.676 & \{311\} & \{-1,3,-1\} \\
+\hline
+C & 960 & 652 & 1.65 & \{311\} & \{-3,1,-1\}\\
+\hline
+D & 1069 & 490 & 1.0485 & \{511\} & \{-5,-1,-1\}\\
+\hline
+E & 834 & 466 & 1.937 & \{220\} & \{-2,-2,0\} \\
+\hline
+F & 618 & 444 & 1.663 & \{131\} & \{1,-3,1\} \\
+\hline
+G & 514 & 608 & 1.636 & \{311\} & \{3,-3,1\} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{5mm}
+
+\par Az indexelés során $A$-t tetszőlegesen választhattam így azt meghagytam a kezdeti indexelés szerint. A $B$-t úgy válaszottam meg, hogy a $(-1)$-szeresével kiadja a $C$-t, ami olyan típusú, mint az $B$ csak esetleg permutálva, előjelcserével. Ha helyesen jártam el, akkor meg kellett kapjam a $C$-t és az $E$-t amelyek 'vektoriális' összegének ki kellett adnia a $D$-t. Ez ellenőrizhető.
+
+\vspace{5mm}
+
+\par A labor alatt megbeszéltek alapján a zónatengely a két bázisvektor, jelen esetben $A$-hoz és $B$-hez tartozó indexek, de ugyan így lehetne akár $C$ és $E$ is, vektoriális szorzata.
+
+\begin{equation*}
+\vec{A} \times \vec{B} = (2,2,0) \times (-1,3,-1) = (-2, 2, 8) \quad \tilde \quad \quad (-1, 4, 4)
+\end{equation*}
+
+\section{Összegzés}
+
+\par A harmadik fejezetben a leolvasás során vétettem hibát termszetesen, ezért nem túl pontosan illeszkednek a $d$ távolságok a \url{http://www.energia.mta.hu/~labar/Si_cF8_04-002-0118.pdf} alatt találhatóakhoz, de nagyjából be lehetett lőni azokat. A legnagyobb bizonytalanságot a $D$ pont jelentette, mert az közelebb volt a (4,2,2)-es index hármashoz, de a többi pont alapján egyértelműen nem annak kellett lennie. Összességénen sikeresnek tekinthető a mérésem.
 
 \end{document}
