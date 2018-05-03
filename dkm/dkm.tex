@@ -1,0 +1,267 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[hungarian]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{a4paper,
+		     tmargin = 35mm, 
+		     lmargin = 25mm,
+		     rmargin = 30mm,
+		     bmargin = 30mm}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{setspace}
+\usepackage{amsmath,amssymb}
+\usepackage{float}
+\usepackage{hyperref}
+
+\usepackage{indentfirst}
+\usepackage{subfig}
+
+\usepackage{siunitx}
+
+\renewcommand\thesection{\Roman{section}}
+
+\begin{document}
+
+\linespread{1.25}
+
+\begin{titlepage}
+
+	\centering
+	\includegraphics[width=0.66\textwidth]{elte.jpg}\par\vspace{1cm}
+	{\scshape\LARGE ELTE TTK \par}
+	\vspace{3cm}
+	{\scshape\Large Dinamikus nano- és mikrokeménység mérése \par}
+	\vspace{1cm}
+	{\large\itshape Olar Alex\par}
+	\vspace{3cm}
+	{\large 2018 \par}
+	
+\end{titlepage}
+
+\tableofcontents
+
+\newpage
+
+\section{Elméleti összefoglaló, mérési eszközök}
+
+\par A mérés során egy keménységmérő eszközt ismertünk meg, amely Vickers-fejjel végezte el a méréseket. Ezek során tiszta anyagok ($Ni, Cu, Al, Ag$) keménységét mértük meg, valamint $Al, Mg$ különböző ötvözeteit vizsgáltuk. Feladatunk volt még a plasztikus instabilitás kvalitatív vizsgálata is a kiértékelés utolsó részében.
+
+\section{Kiértékelés}
+
+\par A Vickers-fej mellett a minta keménysége az alkalmazott erő és a hatékony felület hányadosa, $HV = \frac{F}{A}$. A mérés során dinamikus mérést végzünk, hiszen egy $F-h$, azaz erő-benyomódás görbét vizsgálunk. A görbe alatti terület lehetőséget ad a disszipált energia kiszámítására, valamint a görbéből folyáshatárra, Young-modulusra és a mért anyagok egyéb rugalmas tulajdonságaira következtethetünk. 
+
+\vspace{5mm}
+
+\par A maximális erőhöz tartozó benyomódás $h_{max}$ szükséges a további számolásokhoz. A szükséges korrigált mélységet az alábbi egyenlet adja:
+
+\begin{equation*}
+h_{c} = h_{m} - 0.75\frac{F_{m}}{\frac{dF}{dh}|_{h_{m}}}
+\end{equation*}
+
+\par , amit azért kell alkalmazni, mert a statikus és dinamikus esetben a benyomódás eltér és a következő korrekció szükséges annak visszanyeréséhez. 
+
+\par A kiértékelés során a terheletlen szakaszra egyenest illesztettünk és annak meredekségét használtuk $\frac{dF_{m}}{dh}|_{h_{m}}$ kiszámításához. Míg $F_{max}$-ot az adatsorból meghatározva a hozzá tartozó $h_{max}$-al automatikusan adott volt. Így:
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Anyag & $h_{max} [\mu]$ & $F_{max} [mN]$ \\
+\hline
+Mg &3.481& 0.191 \\
+\hline
+Al &5.186 &0.191 \\
+\hline
+Cu &2.233 &0.192 \\
+\hline
+Ni &1.604 &0.192 \\
+\hline
+Ag& 3.298& 0.191 \\
+\hline
+acél &2.364& 0.191 \\
+\hline
+Al - 0.47$\%$ Mg &  4.156& 0.192 \\
+\hline
+Al - 0.93$\%$ Mg& 4.056& 0.191 \\
+\hline
+Al - 1.25$\%$ Mg& 3.743& 0.192 \\
+\hline
+Al - 2.7$\%$ Mg &3.416& 0.191 \\
+\hline
+Al - 4.5$\%$ Mg &2.878& 0.191 \\
+\hline
+Al - 7.3$\%$ Mg &2.484& 0.192 \\
+\hline
+\end{tabular}
+\end{center}
+
+\par $h_{max}$ hibáját $0.05 ~\mu m$-re becsültem, mivel ez sokkal nagyobb volt, mint $h_{c}$-nek az illesztésből származó hibája, így $\delta h_{c} = \delta h_{max}$.
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Anyag & $h_{c} [\mu m]$ & $\Delta h_{C} [\mu m]$ \\
+\hline
+Mg &3.48& 0.05 \\
+\hline
+Al &5.19 &0.05 \\
+\hline
+Cu &2.24 &0.05 \\
+\hline
+Ni &1.61 &0.05 \\
+\hline
+Ag& 3.30& 0.05\\
+\hline
+acél &2.36& 0.05 \\
+\hline
+Al - 0.47$\%$ Mg &  4.16& 0.05 \\
+\hline
+Al - 0.93$\%$ Mg& 4.06& 0.05 \\
+\hline
+Al - 1.25$\%$ Mg& 3.75& 0.05 \\
+\hline
+Al - 2.7$\%$ Mg &3.42& 0.05 \\
+\hline
+Al - 4.5$\%$ Mg &2.88& 0.05 \\
+\hline
+Al - 7.3$\%$ Mg &2.48& 0.05 \\
+\hline
+\end{tabular}
+\end{center}
+
+\par Jól látható, hogy a korrekció olyan kicsi, hogy a benyomódás csak nagyon kis mértéken belül változott.
+
+\par A Vickers-fej tulajdonsága, hogy az érintkező felület pedig:
+
+\begin{equation*}
+A = 24.5h_{c}^{2}
+\end{equation*}
+
+\par A felületek kiszámolva $h_{c}$-ből:
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Anyag & $A [\mu m^{2}]$ & $\Delta A [\mu m^{2}]$ \\
+\hline
+Mg &297.045 &0.0001\\
+\hline
+Al &659.159 &0.0001\\
+\hline
+Cu &122.16 &0.0001\\
+\hline
+Ni& 63.024 &0.0001\\
+\hline
+Ag &266.478 &0.0001\\
+\hline
+acél& 137.393 &0.0002\\
+\hline
+Al - 0.47$\%$ Mg &423.219 &0.0001\\
+\hline
+Al - 0.93$\%$ Mg &403.038 &0.0001\\
+\hline
+Al - 1.25$\%$ Mg &343.334 &0.0001\\
+\hline
+Al - 2.7$\%$ Mg &285.921 &0.0001\\
+\hline
+Al - 4.5$\%$ Mg &203.027 &0.0001\\
+\hline
+Al - 7.3$\%$ Mg &151.155 &0.0001\\
+\hline
+\end{tabular}
+\end{center}
+
+\par A redukált modulus $E_{r}$ egyből számolható a korábbiak ismeretében, ugyanis:
+
+\begin{equation*}
+E_{r} = \frac{\sqrt{pi}\frac{dF}{dh}|_{h_{m}}}{2\beta\sqrt{A}}
+\end{equation*}
+
+\par Ahol $\beta = 1.012$, és a fentebbire azért van szükség egyáltalán, mivel maga a mérőfej is rugalmas anyag, így deformálódik. Azonban innen, a mért anyag Poisson-számának ismeretében már származtatható annak Young-modulusa.
+
+\begin{equation*}
+\frac{1}{E_{r}} = \frac{1 - \nu^{2}}{E} + \frac{1-\nu^{2}_{i}}{E_{i}}
+\end{equation*}
+
+\par Ahol $E_{i} = 1070 GPa$ a fej Young-modulusa, $\nu_{i} = 0.17$ szintén a fejre jellemző Poisson-szám.
+
+\par Ebből a megfelelő $\nu$ paramétert helyettesítve már egyből az anyagok Young-modulusát számoltam:
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Anyag & $E [GPa]$ & $\Delta E [GPa]$ \\
+\hline
+Mg & 59.421& 0.71\\
+\hline
+Al &38.284 &0.247\\
+\hline
+Cu &108.596 &1.243\\
+\hline
+Ni &146.456 &1.61\\
+\hline
+Ag &72.55 &0.997\\
+\hline
+acél &59.323 &0.674\\
+\hline
+Al - 0.47$\%$ Mg &54.592& 1.384\\
+\hline
+Al - 0.93$\%$ Mg &33.18 &0.272\\
+\hline
+Al - 1.25$\%$ Mg &65.824& 1.149\\
+\hline
+Al - 2.7$\%$ Mg &76.486& 1.275\\
+\hline
+Al - 4.5$\%$ Mg &81.084& 0.744\\
+\hline
+Al - 7.3$\%$ Mg &59.394& 0.363\\
+\hline
+\end{tabular}
+\end{center}
+
+\par A továbbiakban az $Al, Mg$ ötvözetek keménységének meghatározása volt a cél. Erre:
+
+\begin{equation*}
+HV = HV_{0} + Bc^{m}
+\end{equation*}
+
+\par ahol $m$ kitevő modellfüggő. Ezen kívül még vizsgálnunk kellett a plasztikus instabilitást, melyhez alacsony sebességű benyomásnál az $F-h$ görbe 'fogazottságát' kell figyelmesebben megvizsgálnunk. 
+
+\par A keménységet $\frac{F}{A}$-ból származtatva az összes anyagra:
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Anyag & $HV [MPa]$ & $\Delta HV [MPa]$ \\
+\hline
+Mg& 643.526&  4.77\\
+\hline
+Al & 290.238 & 2.149\\
+\hline
+Cu & 1568.648 & 11.579\\
+\hline
+Ni & 3041.951&  22.48\\
+\hline
+Ag & 717.532 & 5.307\\
+\hline
+acél & 1412.266 & 12.865\\
+\hline
+Al - 0.47$\%$ Mg & 452.789&  3.343\\
+\hline
+Al - 0.93$\%$ Mg & 473.894 & 3.509\\
+\hline
+Al - 1.25$\%$ Mg & 559.97&  4.129\\
+\hline
+Al - 2.7$\%$ Mg & 670.051 & 4.951\\
+\hline
+Al - 4.5$\%$ Mg & 944.04 & 6.978\\
+\hline
+Al - 7.3$\%$ Mg & 1266.943 & 9.357\\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}

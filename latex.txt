@@ -1,7 +1,7 @@
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-x [pixel] & y [pixel] & |$\Delta$x| [pixel] & |$\Delta$y| [pixel] & $\Delta$ [pixel] & d [$\si{\angstrom}}$] & $\Delta$d [$\si{\angstrom}}$] & index \\
+a & a & a & a & a & aa & a & a \\
 \hline
 640 & 790 & 98 & 160 & 187.63 & 1.962 & 0.001 & 220 \\
 \hline
