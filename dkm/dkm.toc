@@ -1,0 +1,2 @@
+\contentsline {section}{\numberline {I}Elm\IeC {\'e}leti \IeC {\"o}sszefoglal\IeC {\'o}, m\IeC {\'e}r\IeC {\'e}si eszk\IeC {\"o}z\IeC {\"o}k}{2}{section.1}
+\contentsline {section}{\numberline {II}Ki\IeC {\'e}rt\IeC {\'e}kel\IeC {\'e}s}{2}{section.2}

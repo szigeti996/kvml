@@ -1,0 +1,162 @@
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Anyag & $h_{max} [\mu]$ & $F_{max} [mN]$ \\
+\hline
+Al &5.186 &0.191 \\
+\hline
+Cu &2.233 &0.192 \\
+\hline
+Ni &1.604 &0.192 \\
+\hline
+Ag& 3.298& 0.191 \\
+\hline
+acél &2.364& 0.191 \\
+\hline
+Al - 0.47$\%$ Mg &  4.156& 0.192 \\
+\hline
+Al - 0.93$\%$ Mg& 4.056& 0.191 \\
+\hline
+Al - 1.25$\%$ Mg& 3.743& 0.192 \\
+\hline
+Al - 1.45$\%$ Mg &3.481& 0.191 \\
+\hline
+Al - 2.7$\%$ Mg &3.416& 0.191 \\
+\hline
+Al - 4.5$\%$ Mg &2.878& 0.191 \\
+\hline
+Al - 7.3$\%$ Mg &2.484& 0.192 \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Anyag & $h_{c} [\mu m]$ & $\Delta h_{C} [\mu m]$ \\
+\hline
+Al &5.19 &0.05 \\
+\hline
+Cu &2.24 &0.05 \\
+\hline
+Ni &1.61 &0.05 \\
+\hline
+Ag& 3.30& 0.05\\
+\hline
+acél &2.36& 0.05 \\
+\hline
+Al - 0.47$\%$ Mg &  4.16& 0.05 \\
+\hline
+Al - 0.93$\%$ Mg& 4.06& 0.05 \\
+\hline
+Al - 1.25$\%$ Mg& 3.75& 0.05 \\
+\hline
+Al - 1.45$\%$ Mg &3.48& 0.05 \\
+\hline
+Al - 2.7$\%$ Mg &3.42& 0.05 \\
+\hline
+Al - 4.5$\%$ Mg &2.88& 0.05 \\
+\hline
+Al - 7.3$\%$ Mg &2.48& 0.05 \\
+\hline
+\end{tabular}
+\end{center}
+
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Anyag & $A [\mu m^{2}]$ & $\Delta A [\mu m^{2}]$ \\
+\hline
+Al &659.159 &0.0001\\
+\hline
+Cu &122.16 &0.0001\\
+\hline
+Ni& 63.024 &0.0001\\
+\hline
+Ag &266.478 &0.0001\\
+\hline
+acél& 137.393 &0.0002\\
+\hline
+Al - 0.47$\%$ Mg &423.219 &0.0001\\
+\hline
+Al - 0.93$\%$ Mg &403.038 &0.0001\\
+\hline
+Al - 1.25$\%$ Mg &343.334 &0.0001\\
+\hline
+Al - 1.45$\%$ Mg &297.045 &0.0001\\
+\hline
+Al - 2.7$\%$ Mg &285.921 &0.0001\\
+\hline
+Al - 4.5$\%$ Mg &203.027 &0.0001\\
+\hline
+Al - 7.3$\%$ Mg &151.155 &0.0001\\
+\hline
+\end{tabular}
+\end{center}
+
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Anyag & $E [GPa]$ & $\Delta E [GPa]$ \\
+\hline
+Al &38.284 &0.247\\
+\hline
+Cu &108.596 &1.243\\
+\hline
+Ni &146.456 &1.61\\
+\hline
+Ag &72.55 &0.997\\
+\hline
+acél &59.323 &0.674\\
+\hline
+Al - 0.47$\%$ Mg &54.592& 1.384\\
+\hline
+Al - 0.93$\%$ Mg &33.18 &0.272\\
+\hline
+Al - 1.25$\%$ Mg &65.824& 1.149\\
+\hline
+Al - 1.45$\%$ Mg & 59.421& 0.71\\
+\hline
+Al - 2.7$\%$ Mg &76.486& 1.275\\
+\hline
+Al - 4.5$\%$ Mg &81.084& 0.744\\
+\hline
+Al - 7.3$\%$ Mg &59.394& 0.363\\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Anyag & $HV [MPa]$ & $\Delta HV [MPa]$ \\
+\hline
+Al & 290.238 & 2.149\\
+\hline
+Cu & 1568.648 & 11.579\\
+\hline
+Ni & 3041.951&  22.48\\
+\hline
+Ag & 717.532 & 5.307\\
+\hline
+acél & 1412.266 & 12.865\\
+\hline
+Al - 0.47$\%$ Mg & 452.789&  3.343\\
+\hline
+Al - 0.93$\%$ Mg & 473.894 & 3.509\\
+\hline
+Al - 1.25$\%$ Mg & 559.97&  4.129\\
+\hline
+Al - 1.45$\%$ Mg & 643.526&  4.77\\
+\hline
+Al - 2.7$\%$ Mg & 670.051 & 4.951\\
+\hline
+Al - 4.5$\%$ Mg & 944.04 & 6.978\\
+\hline
+Al - 7.3$\%$ Mg & 1266.943 & 9.357\\
+\hline
+\end{tabular}
+\end{center}
