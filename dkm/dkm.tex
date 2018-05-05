@@ -105,29 +105,29 @@ Al - 7.3$\%$ Mg &2.484& 0.192 \\
 \hline
 Anyag & $h_{c} [\mu m]$ & $\Delta h_{C} [\mu m]$ \\
 \hline
-Al &5.19 &0.05 \\
+Al &5.19 &0.16 \\
 \hline
-Cu &2.24 &0.05 \\
+Cu &2.24 &0.10 \\
 \hline
-Ni &1.61 &0.05 \\
+Ni &1.61 &0.10 \\
 \hline
-Ag& 3.30& 0.05\\
+Ag& 3.30& 0.10\\
 \hline
-acél &2.36& 0.05 \\
+acél &2.36& 0.10 \\
 \hline
 Al - 0.47$\%$ Mg &  4.16& 0.05 \\
 \hline
-Al - 0.93$\%$ Mg& 4.06& 0.05 \\
+Al - 0.93$\%$ Mg& 4.06& 0.02 \\
 \hline
-Al - 1.25$\%$ Mg& 3.75& 0.05 \\
+Al - 1.25$\%$ Mg& 3.75& 0.11 \\
 \hline
-Al - 1.45$\%$ Mg &3.48& 0.05 \\
+Al - 1.45$\%$ Mg &3.48& 0.13 \\
 \hline
-Al - 2.7$\%$ Mg &3.42& 0.05 \\
+Al - 2.7$\%$ Mg &3.42& 0.06 \\
 \hline
-Al - 4.5$\%$ Mg &2.88& 0.05 \\
+Al - 4.5$\%$ Mg &2.88& 0.07 \\
 \hline
-Al - 7.3$\%$ Mg &2.48& 0.05 \\
+Al - 7.3$\%$ Mg &2.48& 0.01 \\
 \hline
 \end{tabular}
 \end{center}
@@ -147,29 +147,29 @@ A = 24.5h_{c}^{2}
 \hline
 Anyag & $A [\mu m^{2}]$ & $\Delta A [\mu m^{2}]$ \\
 \hline
-Al &659.159 &0.0001\\
+Al &659.159 &32.350\\
 \hline
-Cu &122.16 &0.0001\\
+Cu &122.16 &0.722\\
 \hline
-Ni& 63.024 &0.0001\\
+Ni& 63.024 &2.836\\
 \hline
-Ag &266.478 &0.0001\\
+Ag &266.478 &0.712\\
 \hline
-acél& 137.393 &0.0002\\
+acél& 137.393 &0.25.775\\
 \hline
-Al - 0.47$\%$ Mg &423.219 &0.0001\\
+Al - 0.47$\%$ Mg &423.219 &9.677\\
 \hline
-Al - 0.93$\%$ Mg &403.038 &0.0001\\
+Al - 0.93$\%$ Mg &403.038 &2.575\\
 \hline
-Al - 1.25$\%$ Mg &343.334 &0.0001\\
+Al - 1.25$\%$ Mg &343.334 &19.453\\
 \hline
-Al - 1.45$\%$ Mg &297.045 &0.0001\\
+Al - 1.45$\%$ Mg &297.045 &14.756\\
 \hline
-Al - 2.7$\%$ Mg &285.921 &0.0001\\
+Al - 2.7$\%$ Mg &285.921 &10.088\\
 \hline
-Al - 4.5$\%$ Mg &203.027 &0.0001\\
+Al - 4.5$\%$ Mg &203.027 &9.737\\
 \hline
-Al - 7.3$\%$ Mg &151.155 &0.0001\\
+Al - 7.3$\%$ Mg &151.155 &0.753\\
 \hline
 \end{tabular}
 \end{center}
@@ -237,31 +237,62 @@ HV = HV_{0} + Bc^{m}
 \hline
 Anyag & $HV [MPa]$ & $\Delta HV [MPa]$ \\
 \hline
-Al & 290.238 & 2.149\\
+Al & 290.238 & 14.497\\
 \hline
-Cu & 1568.648 & 11.579\\
+Cu & 1568.648 & 18.718\\
 \hline
-Ni & 3041.951&  22.48\\
+Ni & 3041.951&  149.04\\
 \hline
-Ag & 717.532 & 5.307\\
+Ag & 717.532 & 5.875\\
 \hline
-acél & 1412.266 & 12.865\\
+acél & 1412.266 & 13.109\\
 \hline
-Al - 0.47$\%$ Mg & 452.789&  3.343\\
+Al - 0.47$\%$ Mg & 452.789&  12.470\\
 \hline
-Al - 0.93$\%$ Mg & 473.894 & 3.509\\
+Al - 0.93$\%$ Mg & 473.894 & 4.664\\
 \hline
-Al - 1.25$\%$ Mg & 559.97&  4.129\\
+Al - 1.25$\%$ Mg & 559.97&  32.060\\
 \hline
-Al - 1.45$\%$ Mg & 643.526&  4.77\\
+Al - 1.45$\%$ Mg & 643.526&  32.490\\
 \hline
-Al - 2.7$\%$ Mg & 670.051 & 4.951\\
+Al - 2.7$\%$ Mg & 670.051 & 26.632\\
 \hline
-Al - 4.5$\%$ Mg & 944.04 & 6.978\\
+Al - 4.5$\%$ Mg & 944.04 & 42.294\\
 \hline
-Al - 7.3$\%$ Mg & 1266.943 & 9.357\\
+Al - 7.3$\%$ Mg & 1266.943 & 14.024\\
 \hline
 \end{tabular}
 \end{center}
+
+\par Ebből az $Al, Mg$ ötvözetekre $HV = HV_{0} + Bc^{m}$ görbét illesztve:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth]{./adatok/HV_illeszt.png}
+\end{figure}
+
+\par Ahol az illesztési paraméterek értékei a következők:
+
+\begin{equation*}
+HV_{0} = (5967.56 \pm 1631.03) ~MPa \quad \quad
+B = (295.00\pm22.76)~MPa \quad \quad
+m = 0.72\pm0.08
+\end{equation*}
+
+\par Ezután a különböző sebességeknél való benyomást vizsgálva, kivonva a mért erőt az illesztettből a fogazottság a következőképpen alakult:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth]{./adatok/feladat3.png}
+\end{figure}
+
+\par Jól látható, hogy ahogy vártuk, a fogazottság legnagyobb mértékben kis sebességeknél jelenik meg. Az illesztett görbék ($f(h) = A\cdot h^{m}$) paraméterei a következők:
+
+\begin{itemize}
+\item 1 mN/s: $A = (29.52\pm0.13)~mN/(\mu m)^m$, $m = 1.311\pm0.004$
+\item 2 mN/s: $A = (34.99\pm0.10)~mN/(\mu m)^m$, $m = 1.362\pm0.003$
+\item 20 mN/s (1): $A = (31.64\pm0.21)~mN/(\mu m)^m$, $m = 1.457\pm0.006$
+\item 20 mN/s (2): $A = (28.70\pm0.21)~mN/(\mu m)^m$, $m = 1.489\pm0.007$
+\end{itemize}
 
 \end{document}\grid
