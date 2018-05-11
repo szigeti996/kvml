@@ -48,19 +48,11 @@
 
 \section{Elméleti összefoglaló, mérési eszközök}
 
-\vspace{5mm}
-
 \par A mérés során 4 feladatot végeztünk el. Ennek során egy vas-alumínium ötvözetet vizsgáltunk először, melynek a rácsszerkezetét kellett meghatároznunk, majd egy alumínium-magnézium ötvözetre tértünk át, amiben a magnézium arányát kellett meghatároznunk megváltozott rácstávolság alapján. Majd egy ismeretlen minta (szén-pasztilla) csúcskiszélesedése alapján meg lehetett határozni az ismeretlen fázist. Végül egy otthoni feladatot kaptunk a rácsparaméter otthoni meghatározására.
-
-\vspace{5mm}
 
 \section{Kiértékelés}
 
-\vspace{5mm}
-
 \subsection{Rácstípus maghatározása $Fe-Al$ ötvözet}
-
-\vspace{5mm}
 
 \par A reflexiók indexelésével meghatároztuk a difraktorgramból, hogy az ötvözet $BCC$ rács. Ezt a következőképpen kiviteleztük:
 
@@ -68,7 +60,11 @@
 \item meghatároztuk a Bragg-egyenlet alapján, ($2d_{hkl}sin\vartheta = \lambda$), a $d_{hkl}$ értékeket, majd leosztva az első diffrakciós csúcshoz tartozó $d_{hkl}$ értékkel az egész sort, kaptuk a közelítő $N$ értékeket
 \end{itemize} 
 
-\vspace{5mm}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{./fel1.png}
+\caption{$Fe-Al$ ötvözet röntgen spektruma}
+\end{figure} 
 
 \begin{center}
 \begin{tabular}{|c|c|c|}
@@ -100,8 +96,6 @@ $2\vartheta$ & $d_{hkl}$ [$\si{\angstrom}$] & N \\
 \end{tabular}
 \end{center}
 
-\vspace{5mm}
-
 \par Ebből jól látható, hogy jó közelítéssel egész $N$ értékeket kaptunk, amiből látható, hogy ez egy $BCC$ rács, hiszen:
 
 \begin{equation*}
@@ -112,8 +106,71 @@ $2\vartheta$ & $d_{hkl}$ [$\si{\angstrom}$] & N \\
 
 \subsection{Ötvözőkoncentráció meghatározása}
 
-\vspace{5mm}
+\par Az alumínium magnézium szennyezettségét kellett meghatározni diffrakcióból. A kapott diffrakciós görbén leolvastuk a $2\vartheta$ szögeket, majd kiszámoltuk ebből a $d_{hkl}$ mennyiségeket. Itt a szükséges $N$ értékeket megkaptuk, hiszen a Miller-indexek egy kapott fájlban fel voltak sorolva. A mért és számolt adatokat táblázatba foglalva:
 
-\par Az alumínium magnézium szennyezettségét kellett meghatározni diffrakcióból. A kapott diffrakciós görbén  
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{./fel2.png}
+\caption{$Mg$-mal szennyezett $Al$ röntgen spektruma}
+\end{figure} 
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$2\vartheta$ & $d_{hkl}$ [$\si{\angstrom}$] & N & $a_{hkl}$ [$\si{\angstrom}$] \\
+\hline
+38.3 &2.35 & 3 & 4.07\\
+\hline
+44.52 & 2.035 & 4 & 4.07 \\
+\hline
+64.75 & 1.44 & 8 & 4.072\\
+\hline
+77.76 & 1.228 & 11 & 4.073\\
+\hline
+81.95 & 1.176 & 12 & 4.073 \\
+\hline
+98.38 & 1.019 & 16 & 4.074\\
+\hline
+111.15 & 0.935 & 19 & 4.074\\
+\hline
+115.56 & 0.911 & 20 & 4.075\\
+\hline
+135.9 & 0.832 & 24 & 4.075\\
+\hline
+\end{tabular}
+\end{center}
+
+\par A szennyezés miatt $a_{hkl}$ változik a következő formula szerint:
+
+\begin{equation*}
+a_{hkl} = a_{0} - Dcos\vartheta\Big(ctg\vartheta + \frac{cos\vartheta}{\vartheta}\Big) = a_{0} - D\cdot f(\vartheta)
+\end{equation*}
+
+\par ebből jól látható, hogy $a_{hkl} - f(\vartheta)$ változók között lineáris összefüggés van. Erre egyenest illesztve:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{./egyenes.png}
+\caption{Lineáris összefüggés $a_{hkl}$ és $f(\vartheta)$ között}
+\end{figure} 
+
+\par Ahonnan az illesztési paraméterek ($a_{0}$ hibája olyan kicsi lett, hogy felülbecsültem):
+
+\begin{equation*}
+D = (9.542 \pm 1.128) \cdot 10^{-14} ~m \quad \quad
+a_{0} = (4.075 \pm 0.001) \cdot 10^{-10} ~m
+\end{equation*}
+
+\par Nagyban befolyásolja az illesztést, ha a csúcsokat nem kellő értékes jegyre adjuk meg.
+
+\par Ezután le tudtuk olvasni, hogy $a_{0}$-hoz milyen $Mg$ koncentráció tartozik. Ehhez szükségünk van egy ilyen függvényre, ami ezt megmutatja. Ehhez a labor során kaptunk egy adatsort, amiből az derült ki, hogy $0.4066$ részarányban tartalmaz az alumínium minta magnéziumot.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.96\textwidth]{./konc.png}
+\caption{Lineáris összefüggés a koncentráció és $a_{hkl}$ között, jelölve a mért pont}
+\end{figure} 
+
+
 
 \end{document}
