@@ -206,6 +206,18 @@ $2\vartheta$ & $d_{hkl}$ [$\si{\angstrom}$] \\
 \includegraphics[width=.88\textwidth]{./maad.pdf}
 \end{figure}
 
+\par Ezen felül számoltunk átlagos szemcseméretet is, a következő összefüggés alapján:
+
+\begin{equation*}
+\Big<x\Big> = \frac{4\lambda}{3\sqrt{\beta^{2} - \beta^{2}_{i}}cos\vartheta}
+\end{equation*}
+
+\par amelyben $\beta_{i} = 0.1^{\circ}$, míg $\vartheta$ az első diffrakciós csúcs törési szöge. $\beta$ a csúcs integrális szélessége (0.2985$^{\circ}$). Ebből kapható, hogy:
+
+\begin{equation*}
+\Big<x\Big> = 45.143 ~nm
+\end{equation*}
+
 \subsection{ Si minta rácsparaméterének meghatározása}
 
 \par A kapott adatok alapján 
@@ -213,27 +225,39 @@ $2\vartheta$ & $d_{hkl}$ [$\si{\angstrom}$] \\
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
 \hline
-$2\vartheta$ & $d_{hkl}$ [$\si{\angstrom}$] & N & $a_{hkl}$ [$\si{\angstrom}$] \\
+$2\vartheta$ & $d_{hkl}$ [$\si{\angstrom}$] & N & $a_{hkl}$ [$\si{\angstrom}$]\\
 \hline
-38.3 &2.35 & 3 & 4.07\\
+28.5 &3.132 & 3 & 5.424\\
 \hline
-44.52 & 2.035 & 4 & 4.07 \\
+47.5 & 1.914 & 8 & 5.414 \\
 \hline
-64.75 & 1.44 & 8 & 4.072\\
+56.25 & 1.635 & 11 & 5.424\\
 \hline
-77.76 & 1.228 & 11 & 4.073\\
+69.25 & 1.357 & 16 & 5.427\\
 \hline
-81.95 & 1.176 & 12 & 4.073 \\
+76.5 & 1.245 & 19 & 5.428\\
 \hline
-98.38 & 1.019 & 16 & 4.074\\
+88.25 & 1.107 & 24 & 5.424\\
 \hline
-111.15 & 0.935 & 19 & 4.074\\
+95.25 & 1.044 & 27 & 5.424\\
 \hline
-115.56 & 0.911 & 20 & 4.075\\
+106.75 & 0.961 & 32 & 5.422\\
 \hline
-135.9 & 0.832 & 24 & 4.075\\
+114.5 & 0.917 & 35 & 5.434\\
+\hline
+128.0 & 0.858 &  40 & 5.425\\
+\hline
+137.25 & 0.828 & 43 & 5.429\\
 \hline
 \end{tabular}
 \end{center}
+
+\par ahol felhasználtam, hogy a Si-kristály köbös rácsú. A korábban is elvégzett $a_{hkl} - f(\vartheta)$ illesztés alapján a rácsparaméter $a_{0} = (5.427 \pm 0.0021) ~\si{\angstrom}$:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.88\textwidth]{./egyenesSi.png}
+\caption{Jól láthatóan a pontok nagyon szórnak, azonban az irpdalmi értéktől így is csak kis mértékben tér el a rácsparaméter ($a_{0} \approx 5.43086 ~\si{\angstrom}$)}
+\end{figure}
 
 \end{document}
